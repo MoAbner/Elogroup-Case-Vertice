@@ -1,0 +1,7 @@
+﻿item;mensal_brl;anual_brl;observacao
+IA — cinco chamadas em todos os tickets;34.1714030625;410.05683675;Tarifa de referência
+Servidor 8 GB / 4 vCPU;247.56;2970.7200000000003;DigitalOcean
+Backup diário;74.26799999999999;891.2159999999999;30% do servidor
+Object storage;25.787499999999998;309.45;US$ 5/mês
+Domínio;5;60;Reserva de R$ 60/ano
+Manutenção — 3h × R$ 150;450;5400;Não inclui evolução

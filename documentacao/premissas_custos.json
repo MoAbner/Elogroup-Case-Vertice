@@ -1,0 +1,107 @@
+{
+  "base": {
+    "tickets_total": 24093,
+    "months": 24,
+    "tickets_month": 1003.875
+  },
+  "exchange_brl_usd": 5.1575,
+  "ai_price_usd_per_million": {
+    "input": 0.4,
+    "output": 1.6
+  },
+  "retry_rate": 0.1,
+  "maintenance": {
+    "hours_month": 3,
+    "brl_hour": 150
+  },
+  "tokens": {
+    "four_calls": {
+      "calls": 4,
+      "output_average": 250,
+      "input_tokens_month": 7729837.500000001,
+      "output_tokens_month": 1104262.5,
+      "cost_usd_month": 4.858755,
+      "cost_brl_month": 25.0590289125,
+      "cost_brl_year": 300.70834695
+    },
+    "five_calls": {
+      "calls": 5,
+      "output_average": 250,
+      "input_tokens_month": 11042625.0,
+      "output_tokens_month": 1380328.125,
+      "cost_usd_month": 6.625575,
+      "cost_brl_month": 34.1714030625,
+      "cost_brl_year": 410.05683675
+    },
+    "five_calls_420_output": {
+      "calls": 5,
+      "output_average": 420,
+      "input_tokens_month": 11042625.0,
+      "output_tokens_month": 2318951.25,
+      "cost_usd_month": 8.127372,
+      "cost_brl_month": 41.916921089999995,
+      "cost_brl_year": 503.00305308
+    },
+    "double_volume": {
+      "calls": 5,
+      "output_average": 250,
+      "input_tokens_month": 22085250.0,
+      "output_tokens_month": 2760656.25,
+      "cost_usd_month": 13.25115,
+      "cost_brl_month": 68.342806125,
+      "cost_brl_year": 820.1136735
+    }
+  },
+  "recurring": {
+    "technology_without_maintenance_month": 386.7869030625,
+    "combined_month": 836.7869030625,
+    "combined_year": 10041.44283675,
+    "combined_with_channel_reserve_month": 1036.7869030625,
+    "combined_with_channel_reserve_year": 12441.44283675
+  },
+  "implementation": {
+    "rate_brl_hour": 200,
+    "hours": 224,
+    "base_brl": 44800,
+    "contingency_brl": 8960.0,
+    "with_contingency_brl": 53760.0,
+    "items": [
+      {
+        "name": "Requisitos, dados, canais e critérios de aceite",
+        "hours": 16
+      },
+      {
+        "name": "Backend, banco PostgreSQL, mensagens, anexos e histórico",
+        "hours": 32
+      },
+      {
+        "name": "Perfis, permissões, LGPD e trilha de auditoria",
+        "hours": 20
+      },
+      {
+        "name": "Ranking 40/40/20, fila-2.0, P0 e explicabilidade",
+        "hours": 24
+      },
+      {
+        "name": "Canal Vértice, e-mail e WhatsApp",
+        "hours": 36
+      },
+      {
+        "name": "Chatbot, prompts, RAG e consulta de pedidos",
+        "hours": 32
+      },
+      {
+        "name": "Logs, tokens, alertas, backup e restauração",
+        "hours": 20
+      },
+      {
+        "name": "Testes ponta a ponta, segurança e correções",
+        "hours": 28
+      },
+      {
+        "name": "Treinamento e entrada assistida",
+        "hours": 16
+      }
+    ]
+  }
+}

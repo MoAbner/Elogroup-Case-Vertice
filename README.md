@@ -59,3 +59,10 @@ Os pedidos, perfis, canais e conversas iniciais são fictícios. Use `POST /api/
 - `app/data/`: mocks em JSON; o banco gerado não é versionado.
 - `tests/`: testes de domínio, acesso e conversas.
 
+## Análise de custos e ranking
+
+- `documentacao/ANALISE_CUSTOS_CHATBOT_OMNICHANNEL.html`: estimativa mensal e anual, canais, tokens e implantação separada.
+- `documentacao/ANALISE_CUSTOS_CHATBOT_OMNICHANNEL.pdf`: versão pronta para apresentação.
+- `documentacao/premissas_custos.json` e `documentacao/custos_recorrentes.csv`: memória dos cálculos.
+- `documentacao/AUDITORIA_RANKINGS.md`: verificação do 40/40/20 e da fila-2.0 no protótipo final.
+- `documentacao/gerar_analise_custos.py`: regenera os documentos e cálculos quando volume, câmbio ou tarifas mudarem.
