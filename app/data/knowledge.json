@@ -1,0 +1,9 @@
+{
+  "documents": [
+    {"id":"POL-TROCA-01","title":"Trocas","topics":["troca","tamanho","serviu"],"content":"Solicitações de troca são avaliadas pelo time de Trocas e pós-venda. O chatbot coleta pedido e motivo, mas não aprova nem promete a troca."},
+    {"id":"POL-DEFEITO-01","title":"Produto com defeito","topics":["defeito","quebrado","danificado","queimado"],"content":"Defeitos e riscos de segurança são encaminhados para Qualidade e pós-venda. Não orientar uso de item com risco de segurança."},
+    {"id":"POL-PAG-01","title":"Pagamentos","topics":["pagamento","cobrança","cartão","pix"],"content":"Pagamento não aprovado segue para Financeiro. Cobrança duplicada, desconhecida ou suspeita recebe prioridade crítica e atendimento especializado."},
+    {"id":"POL-ENTREGA-01","title":"Pedidos e entrega","topics":["pedido","entrega","rastreio","atraso"],"content":"O status só pode ser informado após localizar um pedido pertencente ao cliente. Atrasos e divergências são encaminhados para Logística."}
+  ]
+}
+

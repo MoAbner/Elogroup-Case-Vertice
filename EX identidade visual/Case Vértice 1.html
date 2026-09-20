@@ -1,0 +1,1401 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><style id="qw-theme">:root {
+  --color-bg: #faf9fc;
+  --color-text: #131920;
+  --color-navbar-bg: #f9f9fb;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #fff;
+  --color-bg-tertiary: #f9fafb;
+  --color-bg-hover: #f3f4f6;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+  --color-border: #0000001f;
+  --color-border-light: #0000000f;
+  --color-border-strong: #d1d5db;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent);
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --block-hover-outline: 1px dashed color-mix(in srgb, #4200db 50%, transparent);
+  --block-selected-outline: 1px solid #8575ff;
+  --block-selection-outline-offset: 2px;
+  --block-selected-halo: 0 0 8px color-mix(in srgb, #4200db 40%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #fff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #e8e6ff;
+  --color-user-bubble: #f3f3f7;
+  --color-user-bubble-text: #131920;
+  --color-text-secondary: #5e5e5e;
+  --color-text-tertiary: #656871;
+  --color-text-muted: #9ca3af;
+  --color-text-on-primary: #fff;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #e6f5eb;
+  --color-success-border: #b3d9bf;
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-success-text: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: #fceaea;
+  --color-error-border: #f2cccc;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #fff;
+  --color-error-text: #700000;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #fef7e6;
+  --color-warning-border: #f9dfa3;
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #ebf3fc;
+  --color-info-border: #b3d1f0;
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #fff;
+  --color-overlay: #00000080;
+  --color-shadow: #00000014;
+  --color-hover: #0000000d;
+  --color-tooltip-bg: #000000d9;
+  --color-tooltip-text: #fff;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: #4200db66;
+  --color-voice-red-glow: #db000066;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px #0000000d;
+  --shadow-md: 0 4px 12px #00000014;
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #10b981;
+  --color-teal: #4ecdc4;
+  --color-code-bg: #f3f3f7;
+  --color-code-header-bg: #f1f3f5;
+  --color-code-text: #24292e;
+  --color-code-border: #e1e4e8;
+  --color-code-muted: #6a737d;
+  --color-inline-code-bg: #f3f3f7;
+  --color-inline-code-text: #24292e;
+  --color-inline-code-border: #e1e4e8;
+  --color-scrollbar-thumb: #d1d5db;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #333;
+  --color-graph-node-text-dim: #7f8c8d;
+  --color-graph-edge-default: #95a5a6;
+  --color-graph-edge-cross: #e67e22;
+  --color-graph-edge-text: #666;
+  --color-graph-edge-stroke: #fff;
+  --color-graph-highlight-bg: #ff6b6b;
+  --color-graph-highlight-border: #e74c3c;
+  --color-graph-search-bg: gold;
+  --color-graph-search-border: orange;
+  --color-graph-focus-border: #c0392b;
+  --color-graph-external-border: #95a5a6;
+  --color-graph-cat-file: #3498db;
+  --color-graph-cat-folder: #7f8c8d;
+  --color-graph-cat-file-aggregate: #2980b9;
+  --color-graph-cat-class: #9b59b6;
+  --color-graph-cat-function: #2ecc71;
+  --color-graph-cat-method: #1abc9c;
+  --color-graph-cat-variable: #f39c12;
+  --color-graph-cat-import: #d35400;
+  --color-graph-cat-module: #5b6abf;
+  --color-graph-cat-concept: #e74c3c;
+  --color-graph-cat-person: #ff6b6b;
+  --color-graph-cat-org: #4ecdc4;
+  --color-graph-cat-organization: #4ecdc4;
+  --color-graph-cat-product: #a29bfe;
+  --color-graph-cat-metric: #fd79a8;
+  --color-graph-cat-location: #34495e;
+  --color-graph-cat-date: #e056a0;
+  --color-graph-cat-code: #3498db;
+  --color-graph-cat-doc: #7f8c8d;
+  --color-graph-cat-url: #00b894;
+  --color-graph-cat-email: #6c5ce7;
+  --color-graph-cat-unknown: #bdc3c7;
+  --color-graph-rel-contains: #bdc3c7;
+  --color-graph-rel-extends: #9b59b6;
+  --color-graph-rel-implements: #3498db;
+  --color-graph-rel-imports: #e67e22;
+  --color-graph-rel-uses: #2ecc71;
+  --color-graph-rel-calls: #27ae60;
+  --color-graph-rel-references: #f39c12;
+  --color-graph-rel-related-to: #95a5a6;
+  --color-graph-rel-works-on: #e74c3c;
+  --color-graph-rel-owns: #1abc9c;
+  --color-graph-rel-depends-on: #e67e22;
+  --color-graph-rel-parent-of: #bdc3c7;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #9ca3af;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #f9fafb;
+  --qs-tertiary-background: #f9fafb;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --safe-top: 0px;
+  --safe-bottom: 0px;
+  --safe-left: 0px;
+  --safe-right: 0px;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: #b400aa;
+  --highlight-selected-bg-color: #006400;
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: light;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Consulting Lab | Projeto Vértice — BootCamp Nova Geração</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --dark-900: #FFFFFF;
+      --dark-800: #F7F8FA;
+      --dark-700: #FFFFFF;
+      --dark-600: #F0F2F5;
+      --dark-500: #E8EBF0;
+      --dark-400: #D8DCE4;
+      --dark-300: #C8CDD8;
+      --purple-500: #C324E8;
+      --purple-400: #9B14C4;
+      --purple-300: #7A0FA0;
+      --purple-200: #EDD8F7;
+      --purple-100: #F7EEFF;
+      --blue-500: #3947F3;
+      --blue-400: #2C38D6;
+      --blue-300: #4A57E8;
+      --lime-500: #3D6B00;
+      --lime-400: #4A8000;
+      --lime-600: #2E5000;
+      --gray-500: #5A5F6A;
+      --gray-400: #4A4F5A;
+      --gray-300: #2A2D35;
+      --gray-200: #1A1D24;
+      --white: #111111;
+      --shadow-glow: 0 0 60px rgba(195, 36, 232, 0.15);
+      --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.4);
+      --radius-xl: 28px;
+      --radius-lg: 20px;
+      --radius-md: 14px;
+      --radius-sm: 8px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--dark-900);
+      color: #111111;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page { max-width: 1200px; margin: 0 auto; padding: 48px 32px 80px; }
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      background: linear-gradient(145deg, #F0F4FF 0%, #E8EEFF 100%);
+      border: 1px solid rgba(195, 36, 232, 0.2);
+      border-radius: var(--radius-xl);
+      padding: 56px 52px;
+      overflow: hidden;
+      box-shadow: var(--shadow-glow);
+    }
+    .hero::before {
+      content: ""; position: absolute; top: -80px; right: -80px;
+      width: 400px; height: 400px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(195, 36, 232, 0.15), transparent 70%);
+      pointer-events: none;
+    }
+    .hero::after {
+      content: ""; position: absolute; bottom: -120px; left: -60px;
+      width: 350px; height: 350px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(57, 71, 243, 0.1), transparent 70%);
+      pointer-events: none;
+    }
+    .kicker {
+      display: inline-flex; gap: 8px; align-items: center;
+      padding: 8px 16px; border-radius: 999px;
+      background: rgba(195, 36, 232, 0.12);
+      border: 1px solid rgba(195, 36, 232, 0.3);
+      font-size: 11px; letter-spacing: 1.2px;
+      text-transform: uppercase; font-weight: 700; color: var(--purple-400);
+    }
+    h1 {
+      margin: 28px 0 16px; font-size: clamp(40px, 6vw, 72px);
+      font-weight: 900; line-height: 0.92; letter-spacing: -3px;
+      background: linear-gradient(135deg, #111111 0%, #9B14C4 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text; position: relative; z-index: 2;
+    }
+    .subtitle {
+      max-width: 720px; font-size: 17px; font-weight: 400;
+      color: #222222; line-height: 1.6; position: relative; z-index: 2;
+    }
+    .hero-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 14px; margin-top: 40px; position: relative; z-index: 2;
+    }
+    .metric-card {
+      padding: 20px; border-radius: var(--radius-md);
+      background: rgba(255,255,255,0.7);
+      border: 1px solid rgba(0,0,0,0.1);
+      backdrop-filter: blur(12px); transition: all 0.2s ease;
+    }
+    .metric-card:hover {
+      background: rgba(195, 36, 232, 0.08);
+      border-color: rgba(195, 36, 232, 0.3); transform: translateY(-2px);
+    }
+    .metric-card strong {
+      display: block; font-size: 14px; font-weight: 700;
+      color: var(--lime-500); margin-bottom: 6px; letter-spacing: 0.3px;
+    }
+    .metric-card span { font-size: 13px; color: var(--gray-300); line-height: 1.4; }
+    .metric-card span { color: #444444; }
+
+    /* ===== NAVIGATION TABS ===== */
+    .nav-tabs {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255, 255, 255, 0.97);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+      margin: 40px -32px 0;
+      padding: 0 32px;
+      display: flex; gap: 0; overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .nav-tabs::-webkit-scrollbar { display: none; }
+    .nav-tab {
+      padding: 14px 20px; font-size: 13px; font-weight: 600;
+      color: #888888; white-space: nowrap;
+      cursor: pointer; border-bottom: 2px solid transparent;
+      transition: all 0.2s ease; user-select: none;
+    }
+    .nav-tab:hover { color: #333333; }
+    .nav-tab.active {
+      color: var(--purple-400);
+      border-bottom-color: var(--purple-500);
+    }
+
+    /* ===== TAB CONTENT ===== */
+    .tab-content { display: none; animation: fadeIn 0.3s ease; }
+    .tab-content.active { display: block; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+    /* ===== SECTIONS ===== */
+    section { margin-top: 48px; }
+    .section-title { display: flex; align-items: flex-start; gap: 16px; margin-bottom: 24px; }
+    .section-number {
+      flex: 0 0 auto; width: 40px; height: 40px;
+      display: grid; place-items: center; border-radius: 50%;
+      background: linear-gradient(135deg, var(--purple-500), var(--blue-500));
+      color: #111111; font-weight: 800; font-size: 16px;
+      box-shadow: 0 4px 16px rgba(195, 36, 232, 0.3);
+    }
+    h2 { font-size: 28px; font-weight: 800; letter-spacing: -0.8px; color: #111111; margin-bottom: 4px; }
+    .section-title p { font-size: 15px; color: #444444; margin-top: 6px; line-height: 1.6; }
+
+    /* ===== CARDS ===== */
+    .card {
+      background: var(--dark-700); border: 1px solid rgba(255,255,255,0.06);
+      border-radius: var(--radius-lg); padding: 28px;
+    }
+    .card h3 { font-size: 18px; font-weight: 700; margin-bottom: 10px; color: #111111; }
+    .card p { font-size: 14px; color: var(--gray-300); line-height: 1.6; }
+
+    /* ===== BRIEFING ===== */
+    .briefing { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .pill-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+    .pill {
+      display: inline-block; padding: 6px 14px; border-radius: 999px;
+      font-size: 12px; font-weight: 600;
+      background: rgba(195, 36, 232, 0.1);
+      border: 1px solid rgba(195, 36, 232, 0.25); color: var(--purple-400);
+    }
+    .challenge {
+      background: var(--dark-700); border: 1px solid rgba(255,255,255,0.06);
+      border-radius: var(--radius-lg); padding: 28px;
+    }
+    .challenge h3 { font-size: 18px; font-weight: 700; margin-bottom: 10px; color: #111111; }
+    .challenge p { font-size: 14px; color: var(--gray-300); line-height: 1.6; }
+    .quote {
+      margin-top: 14px; padding: 16px 20px;
+      border-left: 3px solid var(--purple-500);
+      background: rgba(195, 36, 232, 0.06);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      font-size: 15px; font-weight: 500; color: #4A0060;
+      font-style: italic; line-height: 1.5;
+    }
+
+    /* ===== GRID LAYOUTS ===== */
+    .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; }
+    .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+
+    /* ===== MINI CARDS ===== */
+    .mini-card {
+      background: #FFFFFF; border: 1px solid rgba(0,0,0,0.1);
+      border-radius: var(--radius-md); padding: 24px; transition: all 0.2s ease;
+    }
+    .mini-card:hover {
+      border-color: rgba(195, 36, 232, 0.2);
+      transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    }
+    .mini-card h3 { font-size: 16px; font-weight: 700; margin: 10px 0 8px; color: #111111; }
+    .mini-card p { font-size: 13px; color: #444444; line-height: 1.55; }
+    .mini-card ul { margin-top: 10px; padding-left: 18px; font-size: 13px; color: #444444; }
+    .mini-card ul li { margin-bottom: 5px; }
+    .mini-card.accent { border-left: 3px solid var(--purple-500); }
+
+    /* ===== TAGS ===== */
+    .tag {
+      display: inline-block; padding: 4px 12px; border-radius: 999px;
+      font-size: 11px; font-weight: 700; letter-spacing: 0.5px;
+      text-transform: uppercase;
+      background: rgba(229, 254, 145, 0.12); color: var(--lime-500);
+      border: 1px solid rgba(229, 254, 145, 0.2);
+    }
+
+    /* ===== HYPOTHESIS ===== */
+    .hypothesis-note {
+      background: rgba(57, 71, 243, 0.08);
+      border: 1px solid rgba(57, 71, 243, 0.2);
+      border-radius: var(--radius-md); padding: 16px 20px;
+      margin-bottom: 20px; font-size: 14px; color: #1A2080;
+    }
+    .hypothesis-note strong { color: var(--blue-400); }
+    .hypothesis-label {
+      display: inline-block; padding: 3px 10px; border-radius: 999px;
+      font-size: 10px; font-weight: 600; letter-spacing: 0.3px;
+      text-transform: uppercase;
+      background: rgba(195, 36, 232, 0.1); color: var(--purple-400); margin-top: 6px;
+    }
+    .hypothesis-question {
+      margin-top: 10px; padding: 10px 14px;
+      background: rgba(57, 71, 243, 0.06); border-radius: var(--radius-sm);
+      font-size: 12px; font-weight: 500; color: #1A2080; font-style: italic;
+    }
+
+    /* ===== OBJECTIVE BOX (NOVO) ===== */
+    .objective-box {
+      margin-top: 12px; padding: 12px 16px;
+      background: rgba(229, 254, 145, 0.06);
+      border: 1px solid rgba(229, 254, 145, 0.18);
+      border-radius: var(--radius-sm);
+      font-size: 12px; font-weight: 600; color: var(--lime-500);
+    }
+    .objective-box i { margin-right: 6px; opacity: 0.8; }
+
+    /* ===== MODULES ===== */
+    .mini-card.module { border-left: 3px solid var(--purple-500); position: relative; }
+    .mini-card.module.green { border-left-color: var(--lime-500); }
+    .mini-card.module.orange { border-left-color: #FFD966; }
+    .mini-card.module.red { border-left-color: #FF6B6B; }
+    .prompt {
+      margin-top: 14px; padding: 14px 16px;
+      background: rgba(229, 254, 145, 0.05);
+      border: 1px solid rgba(229, 254, 145, 0.15);
+      border-radius: var(--radius-sm); font-size: 12px;
+      color: var(--lime-500); font-family: 'SF Mono', 'Consolas', monospace; line-height: 1.5;
+    }
+    .module-objective {
+      margin-top: 12px; padding: 10px 14px;
+      background: rgba(57, 71, 243, 0.08);
+      border-left: 3px solid var(--blue-400);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      font-size: 12px; color: #1A2080;
+    }
+    .module-objective strong { color: var(--blue-300); font-size: 10px; text-transform: uppercase; letter-spacing: 0.5px; }
+
+    /* ===== ARCHITECTURE ===== */
+    .architecture { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+    .layer {
+      background: #FFFFFF; border: 1px solid rgba(0,0,0,0.1);
+      border-radius: var(--radius-md); padding: 24px; position: relative; overflow: hidden;
+    }
+    .layer::before {
+      content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, var(--purple-500), var(--blue-500));
+    }
+    .layer small { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--purple-400); }
+    .layer h3 { font-size: 16px; font-weight: 700; margin: 8px 0; color: #111111; }
+    .layer p { font-size: 13px; color: #444444; line-height: 1.5; }
+    .layer ul { margin-top: 12px; padding-left: 16px; font-size: 12px; color: #444444; }
+    .layer ul li { margin-bottom: 4px; }
+
+    /* ===== TABLE ===== */
+    table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    thead { background: rgba(195, 36, 232, 0.08); }
+    th {
+      text-align: left; padding: 12px 16px; font-weight: 700; font-size: 12px;
+      text-transform: uppercase; letter-spacing: 0.5px; color: var(--purple-400);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    td {
+      padding: 12px 16px; color: var(--gray-200);
+      border-bottom: 1px solid rgba(255,255,255,0.04); vertical-align: top;
+    }
+    tr:hover td { background: rgba(255,255,255,0.02); }
+    td strong { color: #111111; }
+
+    /* ===== DELIVERABLES ===== */
+    .deliverables { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+    .deliverable {
+      background: #FFFFFF; border: 1px solid rgba(0,0,0,0.1);
+      border-radius: var(--radius-md); padding: 22px; transition: all 0.2s ease;
+    }
+    .deliverable:hover { border-color: rgba(195, 36, 232, 0.2); transform: translateY(-2px); }
+    .deliverable h3 { font-size: 15px; font-weight: 700; margin-bottom: 6px; color: var(--lime-500); }
+    .deliverable p { font-size: 13px; color: #444444; line-height: 1.5; }
+
+    /* ===== GLOSSARY ===== */
+    .glossary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; }
+    .glossary-item {
+      padding: 14px 18px; background: #F7F8FA;
+      border: 1px solid rgba(0,0,0,0.08); border-radius: var(--radius-sm);
+    }
+    .glossary-item dt {
+      font-size: 13px; font-weight: 700; color: var(--purple-400); margin-bottom: 4px;
+    }
+    .glossary-item dd { font-size: 12px; color: #444444; line-height: 1.5; }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      margin-top: 60px; text-align: center; padding: 24px;
+      border-top: 1px solid rgba(0,0,0,0.08);
+      font-size: 13px; font-weight: 600; letter-spacing: 1px;
+      text-transform: uppercase; color: #999999;
+    }
+    .footer span {
+      background: linear-gradient(135deg, var(--purple-500), var(--blue-500));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+
+    /* ===== NAV ARROWS ===== */
+    .nav-arrow {
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 200;
+      width: 44px; height: 44px;
+      display: flex; align-items: center; justify-content: center;
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid rgba(195, 36, 232, 0.25);
+      border-radius: 50%;
+      cursor: pointer;
+      color: var(--purple-400);
+      font-size: 18px;
+      backdrop-filter: blur(10px);
+      transition: all 0.2s ease;
+      user-select: none;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+    }
+    .nav-arrow:hover {
+      background: rgba(195, 36, 232, 0.2);
+      border-color: var(--purple-500);
+      transform: translateY(-50%) scale(1.1);
+    }
+    .nav-arrow.disabled {
+      opacity: 0.2;
+      pointer-events: none;
+    }
+    .nav-arrow-left  { left: 12px; }
+    .nav-arrow-right { right: 12px; }
+
+    @media print {
+      .nav-arrow { display: none; }
+    }
+
+    /* ===== PRINT ===== */
+    .print-button {
+      position: fixed; top: 20px; right: 20px; z-index: 1000;
+      padding: 10px 20px; background: var(--purple-500); color: #111111;
+      border: none; border-radius: 999px; font-size: 13px; font-weight: 600;
+      cursor: pointer; transition: all 0.2s ease;
+      box-shadow: 0 4px 16px rgba(195, 36, 232, 0.3);
+    }
+    .print-button:hover { background: var(--purple-400); transform: translateY(-1px); }
+
+    @media print {
+      .print-button, .nav-tabs { display: none; }
+      .tab-content { display: block !important; }
+      body { background: white; color: #111; }
+      .hero { background: #191919 !important; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+      .card, .mini-card, .layer, .deliverable, .challenge { background: #f5f5f5; border-color: #ddd; }
+      .section-number { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+    }
+
+    @media (max-width: 768px) {
+      .page { padding: 24px 16px 48px; }
+      .hero { padding: 32px 24px; }
+      h1 { font-size: 36px; letter-spacing: -1.5px; }
+      .hero-grid { grid-template-columns: 1fr 1fr; }
+      .briefing { grid-template-columns: 1fr; }
+      .grid-2 { grid-template-columns: 1fr; }
+      .grid-3 { grid-template-columns: 1fr; }
+      .grid-4 { grid-template-columns: 1fr 1fr; }
+      .architecture { grid-template-columns: 1fr; }
+      .deliverables { grid-template-columns: 1fr; }
+      .nav-tabs { margin: 40px -16px 0; padding: 0 16px; }
+    }
+  </style>
+</head>
+<body>
+  <button class="print-button" onclick="window.print()"><i class="fa-solid fa-print"></i> Imprimir / PDF</button>
+
+  <!-- NAV ARROWS -->
+  <button class="nav-arrow nav-arrow-left" id="arrowLeft" aria-label="Aba anterior"><i class="fa-solid fa-chevron-left"></i></button>
+  <button class="nav-arrow nav-arrow-right" id="arrowRight" aria-label="Próxima aba"><i class="fa-solid fa-chevron-right"></i></button>
+
+  <main class="page">
+    <!-- HERO -->
+    <header class="hero">
+      <div class="kicker"><i class="fa-solid fa-rocket"></i> Case de negócio · Analytics · Technology · Management · IA</div>
+      <h1>AI Consulting Lab<br>Projeto Vértice</h1>
+      <p class="subtitle">
+        Simulação de uma rotina consultiva em um projeto realista de diagnóstico, dados, IA, recomendação executiva e geração de impacto para o cliente.
+      </p>
+      <div class="hero-grid">
+        <div class="metric-card">
+          <strong><i class="fa-solid fa-building"></i> Cliente</strong>
+          <span>Vértice Retail, empresa digital em crescimento</span>
+        </div>
+        <div class="metric-card">
+          <strong><i class="fa-solid fa-bullseye"></i> Missão</strong>
+          <span>Recuperar margem e produtividade</span>
+        </div>
+        <div class="metric-card">
+          <strong><i class="fa-solid fa-file-lines"></i> Entregável</strong>
+          <span>Apresentação Final + protótipo + business case</span>
+        </div>
+        <div class="metric-card">
+          <strong><i class="fa-solid fa-calendar-days"></i> Horizonte</strong>
+          <span>Plano de impacto em 30, 60 e 90 dias</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav class="nav-tabs">
+      <div class="nav-tab active" data-tab="tab-conceito">1. Conceito</div>
+      <div class="nav-tab" data-tab="tab-investigacao">2. Investigação</div>
+      <div class="nav-tab" data-tab="tab-solucao">3. Solução</div>
+      <div class="nav-tab" data-tab="tab-modulos">4. Módulos IA</div>
+      <div class="nav-tab" data-tab="tab-dados">5. Data Room</div>
+      <div class="nav-tab" data-tab="tab-kpis">6. KPIs</div>
+      <div class="nav-tab" data-tab="tab-entregaveis">7. Entregáveis</div>
+      <div class="nav-tab" data-tab="tab-apresentacao">8. Apresentação Final</div>
+      <div class="nav-tab" data-tab="tab-observacoes">9. Observações</div>
+      <div class="nav-tab" data-tab="tab-glossario">10. Glossário</div>
+    </nav>
+
+    <!-- TAB: CONCEITO -->
+    <div id="tab-conceito" class="tab-content active">
+      <section>
+        <div class="section-title">
+          <div class="section-number">1</div>
+          <div>
+            <h2>Conceito do case</h2>
+            <p>O case simula um projeto de consultoria de ponta a ponta. Vocês assumem o papel de <strong style="color:var(--white);">squads</strong> contratadas para resolver um problema de negócio ambíguo, usando IA como acelerador de diagnóstico, análise, automação e recomendação.</p>
+          </div>
+        </div>
+        <div class="briefing">
+          <div class="card">
+            <h3>Contexto do cliente</h3>
+            <p>A <strong>Vértice Retail</strong> é uma marca digital de moda, beleza e lifestyle voltada para jovens adultos. A empresa cresceu rapidamente via e-commerce, redes sociais, influenciadores e marketplace, mas a rentabilidade começou a cair.</p>
+            <p style="margin-top:10px;">A diretoria percebe que os relatórios são manuais, os dados estão fragmentados e as decisões ainda dependem muito de feeling. A empresa quer usar dados e IA para profissionalizar sua gestão e melhorar resultado em curto prazo.</p>
+            <div class="pill-list">
+              <span class="pill">E-commerce</span>
+              <span class="pill">Crescimento acelerado</span>
+              <span class="pill">Margem pressionada</span>
+              <span class="pill">Dados fragmentados</span>
+              <span class="pill">Baixa produtividade</span>
+            </div>
+          </div>
+          <div class="challenge">
+            <h3>Desafio central</h3>
+            <p>Responder à diretoria do cliente (CEO, CFO, CMO e COO):</p>
+            <div class="quote">
+              Como podemos usar dados e IA para melhorar rentabilidade, eficiência operacional e qualidade da tomada de decisão nos próximos 90 dias?
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- TAB: INVESTIGAÇÃO -->
+    <div id="tab-investigacao" class="tab-content">
+      <section>
+        <div class="section-title">
+          <div class="section-number">2</div>
+          <div>
+            <h2>Possíveis problemas de negócio a investigar</h2>
+            <p>Os itens abaixo são <strong style="color:var(--white);">exemplos de hipóteses e linhas de investigação</strong> para inspirar o diagnóstico. Não são conclusões prontas — explorem os dados, validem ou refutem hipóteses e identifiquem outras causas relevantes.</p>
+          </div>
+        </div>
+
+        <div class="hypothesis-note">
+          <strong>Como usar esta seção:</strong> pensem nos cards como pontos de partida para o diagnóstico. Formulem perguntas, testem evidências e descubram quais problemas realmente explicam a queda de rentabilidade e eficiência do cliente. Cada card inclui um <strong>objetivo</strong> — ele indica o que a investigação deve produzir como resultado acionável para a diretoria.
+        </div>
+
+        <div class="grid-3">
+          <div class="mini-card accent hypothesis-card">
+            <span class="tag">Margem</span>
+            <span class="hypothesis-label">Exemplo de hipótese</span>
+            <h3>O crescimento pode estar vindo com pior qualidade de margem</h3>
+            <p>Descontos mais agressivos, frete, devoluções ou mudanças no mix de produtos podem estar reduzindo a contribuição gerada por pedido.</p>
+            <p class="hypothesis-question">Investigue: onde a margem se deteriora — por produto, categoria, canal ou período?</p>
+            <div class="objective-box">
+              <i class="fa-solid fa-crosshairs"></i>
+              <strong>Objetivo:</strong> Quantificar a perda de margem por dimensão e recomendar quais categorias, canais ou produtos devem ser priorizados para recuperação.
+            </div>
+          </div>
+
+          <div class="mini-card accent hypothesis-card">
+            <span class="tag">Marketing</span>
+            <span class="hypothesis-label">Exemplo de hipótese</span>
+            <h3>Nem todo crescimento de aquisição gera clientes igualmente valiosos</h3>
+            <p>Alguns canais podem entregar conversão ou volume, mas com CAC elevado, baixa recorrência ou menor margem ao longo da jornada.</p>
+            <p class="hypothesis-question">Investigue: quais canais trazem crescimento sustentável — e quais apenas aumentam volume?</p>
+            <div class="objective-box">
+              <i class="fa-solid fa-crosshairs"></i>
+              <strong>Objetivo:</strong> Classificar canais por qualidade de aquisição e recomendar realocação de investimento de marketing com base em rentabilidade de longo prazo.
+            </div>
+          </div>
+
+          <div class="mini-card accent hypothesis-card">
+            <span class="tag">Operações</span>
+            <span class="hypothesis-label">Exemplo de hipótese</span>
+            <h3>Falhas operacionais podem estar destruindo valor depois da venda</h3>
+            <p>Rupturas, atrasos, devoluções, lead times ou concentração de problemas em determinados SKUs podem gerar perda de receita e custo adicional.</p>
+            <p class="hypothesis-question">Investigue: quais eventos operacionais têm maior impacto financeiro e em quais produtos?</p>
+            <div class="objective-box">
+              <i class="fa-solid fa-crosshairs"></i>
+              <strong>Objetivo:</strong> Dimensionar o custo financeiro de cada tipo de falha operacional e priorizar as melhorias com maior potencial de recuperação de margem.
+            </div>
+          </div>
+
+          <div class="mini-card accent hypothesis-card">
+            <span class="tag">Atendimento</span>
+            <span class="hypothesis-label">Exemplo de hipótese</span>
+            <h3>O atendimento pode estar concentrando sintomas de problemas recorrentes</h3>
+            <p>O volume de tickets pode revelar padrões de atraso, produto, cobrança ou pós-venda — além de oportunidades de triagem e automação.</p>
+            <p class="hypothesis-question">Investigue: quais temas mais se repetem, quais exigem prioridade e quais poderiam ser automatizados?</p>
+            <div class="objective-box">
+              <i class="fa-solid fa-crosshairs"></i>
+              <strong>Objetivo:</strong> Mapear as causas-raiz dos tickets mais frequentes e estimar o ganho de produtividade/redução de custo com automação da triagem.
+            </div>
+          </div>
+
+          <div class="mini-card accent hypothesis-card">
+            <span class="tag">Cliente</span>
+            <span class="hypothesis-label">Exemplo de hipótese</span>
+            <h3>O crescimento pode esconder diferenças importantes entre segmentos de clientes</h3>
+            <p>Clientes com comportamento semelhante de compra podem apresentar margens, recorrência, ticket e custo de aquisição muito diferentes.</p>
+            <p class="hypothesis-question">Investigue: quais perfis concentram valor, risco de churn ou potencial de retenção?</p>
+            <div class="objective-box">
+              <i class="fa-solid fa-crosshairs"></i>
+              <strong>Objetivo:</strong> Segmentar a base de clientes e identificar quais segmentos devem receber ações de retenção, upsell ou redução de investimento.
+            </div>
+          </div>
+
+          <div class="mini-card accent hypothesis-card">
+            <span class="tag">Gestão &amp; Produtividade</span>
+            <span class="hypothesis-label">Exemplo de hipótese</span>
+            <h3>Parte da ineficiência pode estar na forma como a informação vira decisão</h3>
+            <p>Relatórios manuais, análises recorrentes e dados fragmentados podem atrasar decisões e consumir tempo de equipes que poderiam atuar em problemas de maior valor.</p>
+            <p class="hypothesis-question">Investigue: onde existem gargalos de informação, retrabalho ou oportunidades reais de uso de IA?</p>
+            <div class="objective-box">
+              <i class="fa-solid fa-crosshairs"></i>
+              <strong>Objetivo:</strong> Identificar processos com maior retrabalho informacional e estimar horas/custo recuperáveis com automação e IA aplicada.
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- TAB: SOLUÇÃO -->
+    <div id="tab-solucao" class="tab-content">
+      <section>
+        <div class="section-title">
+          <div class="section-number">3</div>
+          <div>
+            <h2>Estrutura da solução esperada</h2>
+            <p>A solução combina diagnóstico consultivo, analytics, IA aplicada, protótipo e plano de implantação. O objetivo não é apenas criar uma ferramenta, mas demonstrar impacto mensurável para a diretoria.</p>
+          </div>
+        </div>
+        <div class="architecture">
+          <div class="layer">
+            <small>Camada 1</small>
+            <h3>Data Room</h3>
+            <p>Conjunto de bases simuladas de vendas, marketing, clientes, atendimento, estoque e produtos.</p>
+            <ul>
+              <li>Tratamento de dados</li>
+              <li>Qualidade e premissas</li>
+              <li>Unificação de indicadores</li>
+            </ul>
+          </div>
+          <div class="layer">
+            <small>Camada 2</small>
+            <h3>Analytics &amp; Insights</h3>
+            <p>Análises para encontrar causas da queda de rentabilidade e oportunidades de melhoria.</p>
+            <ul>
+              <li>Margem por canal</li>
+              <li>Rentabilidade por produto</li>
+              <li>Segmentação de clientes</li>
+            </ul>
+          </div>
+          <div class="layer">
+            <small>Camada 3</small>
+            <h3>IA &amp; Automação</h3>
+            <p>Uso de IA para classificar textos, analisar funis, mapear eficiência de canais e automatizar sínteses executivas.</p>
+            <ul>
+              <li>Análise de funil e eficiência de canais</li>
+              <li>Classificador de tickets</li>
+              <li>Gerador de relatórios</li>
+            </ul>
+          </div>
+          <div class="layer">
+            <small>Camada 4</small>
+            <h3>Gestão &amp; Impacto</h3>
+            <p>Priorização das iniciativas, business case, roadmap e governança para implementação.</p>
+            <ul>
+              <li>Plano 30-60-90 dias</li>
+              <li>KPIs executivos</li>
+              <li>Riscos e mitigação</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- TAB: MÓDULOS -->
+    <div id="tab-modulos" class="tab-content">
+      <section>
+        <div class="section-title">
+          <div class="section-number">4</div>
+          <div>
+            <h2>Módulos possíveis da solução com IA</h2>
+            <p>Vocês podem escolher <strong style="color:var(--white);">um ou mais módulos</strong> ou <strong style="color:var(--white);">desenvolver uma solução própria</strong>, desde que a proposta resolva uma dor real do cliente e tenha conexão clara com impacto financeiro, operacional ou gerencial.</p>
+          </div>
+        </div>
+        <div class="grid-2">
+          <div class="mini-card module">
+            <span class="tag">Módulo A</span>
+            <h3>Análise de Funil e Eficiência de Canais</h3>
+            <p>Agente que constrói análises agregadas por canal e período, identifica gargalos de conversão e documenta os limites de atribuição entre marketing e vendas.</p>
+            <ul>
+              <li>Mapeia onde o funil perde volume e margem por canal.</li>
+              <li>Compara CAC, ROAS e margem média entre canais de aquisição.</li>
+              <li>Identifica canais que geram volume mas atraem clientes pouco rentáveis.</li>
+            </ul>
+            <div class="module-objective">
+              <strong>Decisão que viabiliza para a diretoria:</strong><br>
+              Quais canais de aquisição devem receber mais ou menos investimento para maximizar margem (não apenas volume).
+            </div>
+            <div class="prompt">Exemplo de saída: "Canal Influenciadores: maior volume de conversões, mas CAC 2,4x acima da média e margem média negativa em 18% dos pedidos."</div>
+          </div>
+
+          <div class="mini-card module green">
+            <span class="tag">Módulo B</span>
+            <h3>Classificador inteligente de atendimento</h3>
+            <p>IA para classificar tickets por tema, urgência, sentimento, risco de churn e ação recomendada.</p>
+            <ul>
+              <li>Reduz tempo de triagem.</li>
+              <li>Identifica demandas automatizáveis.</li>
+              <li>Prioriza clientes críticos.</li>
+            </ul>
+            <div class="module-objective">
+              <strong>Decisão que viabiliza para a diretoria:</strong><br>
+              Onde automatizar o atendimento e quais clientes precisam de intervenção imediata para evitar churn.
+            </div>
+            <div class="prompt">Exemplo: Tema: atraso na entrega · Sentimento: negativo · Prioridade: alta · Ação: enviar rastreio e compensação.</div>
+          </div>
+
+          <div class="mini-card module orange">
+            <span class="tag">Módulo C</span>
+            <h3>Motor de priorização de margem</h3>
+            <p>Modelo simples para ranquear iniciativas conforme impacto estimado, esforço, risco e velocidade de captura.</p>
+            <ul>
+              <li>Compara oportunidades comerciais e operacionais.</li>
+              <li>Ajuda a diretoria a decidir onde atuar primeiro.</li>
+              <li>Separa quick wins de iniciativas estruturais.</li>
+            </ul>
+            <div class="module-objective">
+              <strong>Decisão que viabiliza para a diretoria:</strong><br>
+              Qual sequência de ações adotar nos próximos 90 dias para capturar o maior retorno com menor esforço.
+            </div>
+            <div class="prompt">Exemplo: "Reduzir desconto em SKUs de alta demanda tem alto impacto, baixo esforço e captura em até 30 dias."</div>
+          </div>
+
+          <div class="mini-card module red">
+            <span class="tag">Módulo D</span>
+            <h3>Gerador automático de relatório semanal</h3>
+            <p>Automação que transforma dados e análises em um memo executivo com fatos, causas, riscos e próximas ações.</p>
+            <ul>
+              <li>Padroniza a comunicação gerencial.</li>
+              <li>Reduz retrabalho em relatórios manuais.</li>
+              <li>Conecta KPI, explicação e decisão.</li>
+            </ul>
+            <div class="module-objective">
+              <strong>Decisão que viabiliza para a diretoria:</strong><br>
+              Acompanhar a evolução dos indicadores semanalmente sem depender de compilação manual, focando nas ações corretivas.
+            </div>
+            <div class="prompt">Exemplo: "A receita cresceu 8%, mas a margem caiu 3 p.p. O principal fator foi o aumento de descontos na categoria Moda."</div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- TAB: DADOS -->
+    <div id="tab-dados" class="tab-content">
+      <section>
+        <div class="section-title">
+          <div class="section-number">5</div>
+          <div>
+            <h2>Data room sugerido</h2>
+          </div>
+        </div>
+        <div class="card" style="overflow-x: auto;">
+          <table>
+            <thead>
+              <tr>
+                <th>Base</th>
+                <th>Colunas das bases de dados</th>
+                <th>Finalidade analítica</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Vendas</strong></td>
+                <td>order_id, customer_id, data, canal, categoria, produto, quantidade, receita, desconto, custo_produto, custo_frete, margem, devolvido</td>
+                <td>Identificar receita, margem, desconto, rentabilidade por produto, categoria e canal.</td>
+              </tr>
+              <tr>
+                <td><strong>Marketing</strong></td>
+                <td>campanha, canal, investimento, impressões, cliques, conversões, CAC, ticket médio, margem média</td>
+                <td>Avaliar eficiência dos canais, qualidade do crescimento e retorno das campanhas.</td>
+              </tr>
+              <tr>
+                <td><strong>Clientes</strong></td>
+                <td>customer_id, idade, região, primeira_compra, número_pedidos, receita_total, margem_total, canal_aquisicao, recência, segmento</td>
+                <td>Analisar recompra, LTV, clientes rentáveis, risco de churn e segmentação.</td>
+              </tr>
+              <tr>
+                <td><strong>Atendimento</strong></td>
+                <td>ticket_id, data, canal, categoria, texto_cliente, tempo_resposta, resolvido, sentimento, custo_estimado</td>
+                <td>Classificar demandas, mapear gargalos, automatizar triagem e estimar ganho de produtividade.</td>
+              </tr>
+              <tr>
+                <td><strong>Estoque</strong></td>
+                <td>SKU, categoria, estoque_atual, giro, ruptura, dias_sem_estoque, fornecedor, lead_time, custo_unitario</td>
+                <td>Conectar disponibilidade, giro, ruptura, custo e impacto em vendas/devoluções.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+
+    <!-- TAB: KPIs -->
+    <div id="tab-kpis" class="tab-content">
+      <section>
+        <div class="section-title">
+          <div class="section-number">6</div>
+          <div>
+            <h2>Indicadores executivos recomendados</h2>
+            <p>O dashboard precisa ser simples, acionável e orientado à decisão. Mostrem onde está o problema, quanto vale a oportunidade e qual ação a diretoria deve priorizar.</p>
+          </div>
+        </div>
+        <div class="grid-4">
+          <div class="mini-card"><span class="tag">Comercial</span><ul><li>Receita bruta</li><li>Pedidos</li><li>Ticket médio</li><li>Conversão</li></ul></div>
+          <div class="mini-card"><span class="tag">Margem</span><ul><li>Margem de contribuição</li><li>Desconto médio</li><li>Frete médio</li><li>Rentabilidade por SKU</li></ul></div>
+          <div class="mini-card"><span class="tag">Marketing</span><ul><li>CAC</li><li>ROAS</li><li>Conversões</li><li>Margem por canal</li></ul></div>
+          <div class="mini-card"><span class="tag">Cliente</span><ul><li>Recompra</li><li>LTV</li><li>Churn</li><li>Segmentos</li></ul></div>
+          <div class="mini-card"><span class="tag">Operações</span><ul><li>Taxa de devolução</li><li>Ruptura</li><li>Giro de estoque</li><li>Lead time</li></ul></div>
+          <div class="mini-card"><span class="tag">Atendimento</span><ul><li>Volume de tickets</li><li>SLA</li><li>Sentimento</li><li>Custo por ticket</li></ul></div>
+          <div class="mini-card"><span class="tag">Produtividade</span><ul><li>Horas economizadas</li><li>Automação potencial</li><li>Retrabalho reduzido</li><li>Tempo de resposta</li></ul></div>
+          <div class="mini-card"><span class="tag">Impacto</span><ul><li>EBITDA potencial</li><li>Economia estimada</li><li>Receita protegida</li><li>Payback</li></ul></div>
+        </div>
+      </section>
+    </div>
+
+    <!-- TAB: ENTREGÁVEIS -->
+    <div id="tab-entregaveis" class="tab-content">
+      <section>
+        <div class="section-title">
+          <div class="section-number">7</div>
+          <div>
+            <h2>Entregáveis do case</h2>
+            <p>Ao final, cada squad entrega uma proposta consultiva completa, com raciocínio, evidências, solução e plano de ação — como em um projeto real.</p>
+          </div>
+        </div>
+        <div class="deliverables">
+          <div class="deliverable">
+            <h3><i class="fa-solid fa-magnifying-glass-chart"></i> Diagnóstico executivo</h3>
+            <p>Explicação clara do problema, árvore de hipóteses, principais causas e tamanho das oportunidades.</p>
+          </div>
+          <div class="deliverable">
+            <h3><i class="fa-solid fa-lightbulb"></i> Análises e insights</h3>
+            <p>Principais descobertas suportadas por dados, com premissas explícitas e interpretação de negócio.</p>
+          </div>
+          <div class="deliverable">
+            <h3><i class="fa-solid fa-chart-pie"></i> Dashboard de gestão</h3>
+            <p>Painel com indicadores-chave para a diretoria acompanhar margem, canais, clientes, operação e atendimento.</p>
+          </div>
+          <div class="deliverable">
+            <h3><i class="fa-solid fa-robot"></i> Protótipo ou demonstração de IA</h3>
+            <p>Analisador de funil, classificador, automação, gerador de relatório ou priorizador demonstrável.</p>
+          </div>
+          <div class="deliverable">
+            <h3><i class="fa-solid fa-sack-dollar"></i> Business case</h3>
+            <p>Estimativa de impacto financeiro e operacional: receita protegida, margem recuperada, economia, esforço e payback.</p>
+          </div>
+          <div class="deliverable">
+            <h3><i class="fa-solid fa-road"></i> Roadmap 30-60-90 dias</h3>
+            <p>Plano de implementação com quick wins, iniciativas estruturais, responsáveis, dependências e KPIs.</p>
+          </div>
+          <div class="deliverable">
+            <h3><i class="fa-solid fa-shield-halved"></i> Governança e riscos</h3>
+            <p>Riscos de dados, privacidade, vieses, alucinação, adoção pelo time e controles necessários.</p>
+          </div>
+          <div class="deliverable">
+            <h3><i class="fa-solid fa-presentation-screen"></i> Apresentação Final</h3>
+            <p>Apresentação para a diretoria com diagnóstico, recomendações, demonstração e plano de ação.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- TAB: APRESENTAÇÃO FINAL -->
+    <div id="tab-apresentacao" class="tab-content">
+      <section>
+        <div class="section-title">
+          <div class="section-number">8</div>
+          <div>
+            <h2>Roteiro sugerido da Apresentação Final</h2>
+            <p>A Apresentação Final deve ser direta, executiva e orientada à decisão. Defendam uma recomendação — não apenas mostrem análises.</p>
+          </div>
+        </div>
+        <div class="card" style="overflow-x: auto;">
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Slide</th>
+                <th>O que comunicar</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>1</td><td>Contexto e pergunta central</td><td>Qual é o problema que a consultoria foi contratada para resolver.</td></tr>
+              <tr><td>2</td><td>Diagnóstico do negócio</td><td>Por que a empresa cresce, mas perde eficiência ou margem.</td></tr>
+              <tr><td>3</td><td>Árvore de hipóteses</td><td>Como a squad estruturou o problema de forma lógica e priorizada.</td></tr>
+              <tr><td>4</td><td>Principais insights</td><td>Descobertas mais relevantes, com evidência e implicação de negócio.</td></tr>
+              <tr><td>5</td><td>Oportunidades priorizadas</td><td>Onde agir primeiro para capturar valor.</td></tr>
+              <tr><td>6</td><td>Solução com IA</td><td>Qual módulo foi proposto e como ele resolve a dor do cliente.</td></tr>
+              <tr><td>7</td><td>Demonstração</td><td>Protótipo, fluxo, prompt, dashboard ou automação em funcionamento.</td></tr>
+              <tr><td>8</td><td>Business case</td><td>Impacto estimado, premissas, esforço, economia e retorno.</td></tr>
+              <tr><td>9</td><td>Roadmap</td><td>Plano 30-60-90 dias para implementação.</td></tr>
+              <tr><td>10</td><td>Riscos e governança</td><td>Como mitigar riscos de IA, dados, pessoas e operação.</td></tr>
+              <tr><td>11</td><td>Recomendação final</td><td>Decisão que a diretoria deve tomar e próximos passos.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+
+    <!-- TAB: OBSERVAÇÕES -->
+    <div id="tab-observacoes" class="tab-content">
+      <section>
+        <div class="section-title">
+          <div class="section-number">9</div>
+          <div>
+            <h2>Observações Adicionais</h2>
+            <p>Vocês têm liberdade para definir a abordagem, a arquitetura e o conjunto de ferramentas que melhor sustentem a solução. O objetivo do case é que vocês construam a melhor resposta possível para o problema de negócio — sem restrição a uma única plataforma.</p>
+          </div>
+        </div>
+
+        <div class="challenge">
+          <h3>Liberdade na escolha da stack</h3>
+          <p>O <strong style="color:#111111">EloAgents</strong> pode ser utilizado como parte da solução, mas <strong style="color:#111111">não é obrigatório nem exclusivo</strong>. Vocês podem utilizar, combinar ou desenvolver soluções com quaisquer ferramentas de IA, automação, analytics ou desenvolvimento que considerarem adequadas — desde que a entrega final atenda aos padrões e objetivos do case.</p>
+          <div class="quote">
+            Escolham a tecnologia em função do problema — não o problema em função da tecnologia.
+          </div>
+        </div>
+
+        <div class="card" style="margin-top: 18px; border-left: 3px solid var(--blue-500);">
+          <span class="tag" style="background: rgba(57,71,243,0.12); color: var(--blue-300); border-color: rgba(57,71,243,0.3);">Entrega obrigatória</span>
+          <h3 style="margin-top: 12px;">Rastreabilidade dos artefatos de processo</h3>
+          <p style="margin-top:8px;">Além da Apresentação Final, <strong style="color:#111111">os principais artefatos de processo produzidos pelos agentes ao longo de cada etapa devem ser anexados à entrega da squad</strong>. A intenção é demonstrar a profundidade e a robustez do trabalho — não apenas a resposta final, mas também as evidências, validações e resultados intermediários que sustentam as conclusões.</p>
+          <p style="margin-top:10px;">Esses artefatos de processo devem ser disponibilizados em <strong style="color:#111111">Markdown (.md), PDF (.pdf) ou HTML (.html)</strong>, de acordo com o formato mais adequado para cada saída.</p>
+          <ul style="margin-top:12px; padding-left:20px; font-size:13px; color: var(--gray-400);">
+            <li style="margin-bottom:6px;"><strong style="color:#111111">Relatórios finais produzidos por agentes</strong>, como o relatório gerencial ou memo executivo consolidado.</li>
+            <li style="margin-bottom:6px;"><strong style="color:#111111">Resultados intermediários de validação e sanity checks</strong> realizados por agentes revisores, críticos ou especialistas.</li>
+            <li style="margin-bottom:6px;"><strong style="color:#111111">Cálculos determinísticos executados por agentes via código ou sandbox</strong>, incluindo premissas, resultados e evidências.</li>
+            <li style="margin-bottom:6px;"><strong style="color:#111111">Análises parciais e outputs especializados</strong>, como segmentações, classificações, diagnósticos, priorizações.</li>
+            <li><strong style="color:#111111">Outras evidências relevantes do processo agentic</strong> que permitam compreender como os resultados foram construídos.</li>
+          </ul>
+          <div class="quote" style="margin-top:16px; font-size:14px;">
+            A Apresentação Final não substitui a entrega dos artefatos de processo que sustentam o trabalho. Tornem o processo rastreável — isso mostra maturidade consultiva e dá credibilidade às recomendações de vocês.
+          </div>
+        </div>
+
+        <div class="grid-3" style="margin-top: 20px;">
+          <div class="mini-card accent">
+            <span class="tag">Agentes &amp; IA</span>
+            <h3>Construção de agentes e aplicações inteligentes</h3>
+            <p>É possível utilizar plataformas low-code, frameworks de agentes ou desenvolver a solução diretamente via código.</p>
+            <ul>
+              <li>EloAgents</li>
+              <li>LangGraph, LangChain, CrewAI ou AutoGen</li>
+              <li>APIs de modelos como OpenAI, Anthropic Claude ou Gemini</li>
+              <li>Aplicações próprias em Python, JavaScript ou outras linguagens</li>
+            </ul>
+          </div>
+          <div class="mini-card accent">
+            <span class="tag">Automação</span>
+            <h3>Orquestração e integração de fluxos</h3>
+            <p>Fluxos podem combinar modelos de IA, bases de dados, APIs, regras de negócio e diferentes sistemas.</p>
+            <ul>
+              <li>n8n</li>
+              <li>Make ou Zapier</li>
+              <li>Workflows e pipelines desenvolvidos pela própria squad</li>
+              <li>Integrações via APIs, webhooks e bancos de dados</li>
+            </ul>
+          </div>
+          <div class="mini-card accent">
+            <span class="tag">Desenvolvimento</span>
+            <h3>Ferramentas e IDEs com IA</h3>
+            <p>A squad também pode acelerar a construção técnica utilizando ambientes de desenvolvimento assistidos por IA.</p>
+            <ul>
+              <li>Claude Code</li>
+              <li>Cursor</li>
+              <li>Visual Studio Code, PyCharm ou outras IDEs</li>
+              <li>GitHub Copilot e ambientes em nuvem</li>
+            </ul>
+          </div>
+          <div class="mini-card accent">
+            <span class="tag">Analytics</span>
+            <h3>Análise, dados e visualização</h3>
+            <p>Não há restrição a uma ferramenta específica para explorar dados, construir indicadores ou demonstrar os insights encontrados.</p>
+            <ul>
+              <li>Python, Pandas, Polars ou PySpark</li>
+              <li>SQL e bancos de dados</li>
+              <li>Power BI, Tableau, Looker Studio ou dashboards próprios</li>
+              <li>Jupyter, Databricks ou outros ambientes analíticos</li>
+            </ul>
+          </div>
+          <div class="mini-card accent">
+            <span class="tag">Princípio</span>
+            <h3>A solução importa mais que a ferramenta</h3>
+            <p>A escolha tecnológica deve ser coerente com a dor investigada — contribua para uma solução demonstrável, consistente e aplicável ao contexto do cliente.</p>
+            <ul>
+              <li>Justifiquem as principais escolhas técnicas.</li>
+              <li>Priorizem clareza, robustez e impacto.</li>
+              <li>Combinar diferentes ferramentas é permitido.</li>
+              <li>Novas ferramentas e abordagens são bem-vindas.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- TAB: GLOSSÁRIO -->
+    <div id="tab-glossario" class="tab-content">
+      <section>
+        <div class="section-title">
+          <div class="section-number"><i class="fa-solid fa-book" style="font-size:16px;"></i></div>
+          <div>
+            <h2>Glossário de termos do case</h2>
+            <p>Para evitar ambiguidade, os termos abaixo são usados com significado fixo ao longo de todo o documento.</p>
+          </div>
+        </div>
+        <dl class="glossary-grid">
+          <div class="glossary-item">
+            <dt>Case</dt>
+            <dd>O exercício avaliativo do BootCamp — o problema de negócio que vocês devem resolver como squad.</dd>
+          </div>
+          <div class="glossary-item">
+            <dt>Projeto</dt>
+            <dd>A simulação de consultoria para o cliente Vértice Retail. O case simula um projeto real.</dd>
+          </div>
+          <div class="glossary-item">
+            <dt>Squad</dt>
+            <dd>O time de participantes que trabalha junto na resolução do case. Equivale à equipe de consultoria no projeto simulado.</dd>
+          </div>
+          <div class="glossary-item">
+            <dt>Diretoria</dt>
+            <dd>A audiência executiva do cliente (CEO, CFO, CMO e COO da Vértice Retail) para quem a squad apresenta as recomendações.</dd>
+          </div>
+          <div class="glossary-item">
+            <dt>Apresentação Final</dt>
+            <dd>O entregável principal: a apresentação executiva que a squad faz para a diretoria do cliente, seguindo o roteiro da seção 8.</dd>
+          </div>
+          <div class="glossary-item">
+            <dt>Demonstração</dt>
+            <dd>A parte da Apresentação Final em que a squad mostra o protótipo ou solução de IA em funcionamento (slide 7 do roteiro).</dd>
+          </div>
+          <div class="glossary-item">
+            <dt>Entregáveis</dt>
+            <dd>As entregas finais avaliadas do case: diagnóstico, análises, dashboard, protótipo, business case, roadmap, governança e Apresentação Final.</dd>
+          </div>
+          <div class="glossary-item">
+            <dt>Artefatos de processo</dt>
+            <dd>Outputs intermediários produzidos pelos agentes de IA ao longo do projeto (relatórios, cálculos, classificações, validações). Devem ser entregues como evidência de rastreabilidade.</dd>
+          </div>
+        </dl>
+      </section>
+    </div>
+
+    <div class="footer">
+      <span>BootCamp Nova Geração</span> · Projeto Vértice · 2026
+    </div>
+  </main>
+
+  <script>
+    const tabs = Array.from(document.querySelectorAll('.nav-tab'));
+    let currentIndex = 0;
+
+    function goToTab(index) {
+      if (index < 0 || index >= tabs.length) return;
+      // Deactivate all
+      tabs.forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+      // Activate target
+      tabs[index].classList.add('active');
+      document.getElementById(tabs[index].dataset.tab).classList.add('active');
+      currentIndex = index;
+      // Scroll to top of content area
+      window.scrollTo({ top: document.querySelector('.nav-tabs').offsetTop + 60, behavior: 'smooth' });
+      // Scroll tab into view in the nav bar
+      tabs[index].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      // Update arrows state
+      document.getElementById('arrowLeft').classList.toggle('disabled', currentIndex === 0);
+      document.getElementById('arrowRight').classList.toggle('disabled', currentIndex === tabs.length - 1);
+    }
+
+    // Click on tab label
+    tabs.forEach((tab, i) => tab.addEventListener('click', () => goToTab(i)));
+
+    // Arrow buttons
+    document.getElementById('arrowLeft').addEventListener('click',  () => goToTab(currentIndex - 1));
+    document.getElementById('arrowRight').addEventListener('click', () => goToTab(currentIndex + 1));
+
+    // Keyboard arrow keys
+    document.addEventListener('keydown', e => {
+      if (e.key === 'ArrowRight') goToTab(currentIndex + 1);
+      if (e.key === 'ArrowLeft')  goToTab(currentIndex - 1);
+    });
+
+    // Init: disable left arrow on first load
+    document.getElementById('arrowLeft').classList.add('disabled');
+  </script>
+
+</body></html>

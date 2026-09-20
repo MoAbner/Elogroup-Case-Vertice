@@ -1,0 +1,14 @@
+{
+  "actors": [
+    {"id":"gestor-01","name":"Marina Costa","role":"gestor","label":"Gestora de atendimento","teams":["*"],"permissions":["read_all","reply_all","assign","close","view_metrics"]},
+    {"id":"geral-01","name":"Lucas Rocha","role":"atendente","label":"Atendimento geral","teams":["Atendimento","Logística"],"permissions":["read_team","reply_team","assign_self","close"]},
+    {"id":"financeiro-01","name":"Camila Alves","role":"especialista","label":"Especialista financeiro","teams":["Financeiro"],"permissions":["read_team","reply_team","assign_self","close"]},
+    {"id":"posvenda-01","name":"Rafael Lima","role":"especialista","label":"Pós-venda e qualidade","teams":["Qualidade e pós-venda","Trocas e pós-venda","Suporte de produto"],"permissions":["read_team","reply_team","assign_self","close"]}
+  ],
+  "customers": [
+    {"id":"cliente-ana","name":"Ana Souza","code":"1111","email":"ana@exemplo.test"},
+    {"id":"cliente-bruno","name":"Bruno Lima","code":"2222","email":"bruno@exemplo.test"},
+    {"id":"cliente-carla","name":"Carla Mendes","code":"3333","email":"carla@exemplo.test"}
+  ]
+}
+

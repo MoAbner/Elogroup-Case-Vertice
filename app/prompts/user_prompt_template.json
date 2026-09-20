@@ -1,0 +1,12 @@
+{
+  "ticket": {
+    "id": "{{ticket_id}}",
+    "canal": "{{channel}}",
+    "cliente": "{{customer_name}}",
+    "mensagem_atual": "{{message}}",
+    "historico_resumido": "{{history}}"
+  },
+  "pedido_localizado": "{{order_context}}",
+  "fontes_aprovadas": "{{knowledge_context}}",
+  "instrucao": "Classifique o chamado e produza a próxima resposta. Se não puder resolver com as fontes, encaminhe. Assuntos fora da Vértice devem ser recusados."
+}

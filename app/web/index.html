@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vértice Care · Atendimento integrado</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="ambient ambient-a"></div><div class="ambient ambient-b"></div>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark">V</span><span><b>Vértice Care</b><small>atendimento integrado</small></span></a>
+    <nav class="view-tabs" aria-label="Áreas do protótipo">
+      <button class="view-tab active" data-view="client">Visão do cliente</button>
+      <button class="view-tab" data-view="operator">Central omnichannel</button>
+    </nav>
+    <div class="system-status"><span class="status-dot"></span><span id="systemStatus">Carregando ambiente</span></div>
+  </header>
+
+  <main>
+    <section id="clientView" class="view active">
+      <aside class="panel client-sidebar">
+        <div class="eyebrow">DEMONSTRAÇÃO DO CLIENTE</div>
+        <h1>Olá, <span id="clientFirstName">Ana</span>.</h1>
+        <p class="muted">Escolha um perfil fictício e converse com o primeiro atendimento.</p>
+        <label>Perfil do cliente<select id="customerSelect"></select></label>
+        <label>Canal de entrada<select id="channelSelect"><option>Canal Vértice</option><option>WhatsApp</option><option>E-mail</option><option>Reclame Aqui</option></select></label>
+        <button id="newConversation" class="button primary full">Novo atendimento</button>
+        <div class="divider"></div>
+        <h2>Testes rápidos</h2>
+        <div class="scenario-list">
+          <button data-scenario="Quero saber onde está o pedido VERT-1001.">Status de pedido</button>
+          <button data-scenario="O tamanho não serviu e quero trocar.">Troca de tamanho</button>
+          <button data-scenario="Existe uma cobrança no meu cartão que não reconheço.">Cobrança suspeita</button>
+          <button data-scenario="Quem ganhou a Copa do Mundo?">Fora do escopo</button>
+        </div>
+        <div class="privacy-note"><b>Ambiente fictício</b><span>Não informe dados reais, senhas, CVV ou número completo do cartão.</span></div>
+      </aside>
+
+      <section class="panel chat-shell">
+        <div class="chat-head">
+          <div><div class="eyebrow">ASSISTENTE VÉRTICE</div><h2 id="clientTicketTitle">Comece um atendimento</h2><p id="clientTicketMeta">O assistente analisará, responderá ou encaminhará seu chamado.</p></div>
+          <span id="clientRouteBadge" class="badge neutral">Pronto</span>
+        </div>
+        <div id="clientMessages" class="messages empty-state"><div class="empty-icon">✦</div><h3>Atendimento que mantém o contexto</h3><p>Pedidos simples podem ser resolvidos pelo chatbot. Exceções seguem para a equipe certa, com prioridade e histórico.</p></div>
+        <form id="clientComposer" class="composer"><textarea id="clientInput" rows="1" maxlength="1500" placeholder="Digite sua mensagem..."></textarea><button class="send" aria-label="Enviar">Enviar</button></form>
+      </section>
+    </section>
+
+    <section id="operatorView" class="view operator-layout">
+      <aside class="panel queue-sidebar">
+        <div class="eyebrow">ACESSO SIMULADO</div>
+        <label>Perfil operacional<select id="actorSelect"></select></label>
+        <div id="actorAccess" class="access-card"></div>
+        <div class="queue-title"><div><div class="eyebrow">FILA UNIFICADA</div><h2>Chamados</h2></div><span id="queueCount" class="count">0</span></div>
+        <div class="filters"><button class="filter active" data-filter="all">Todos</button><button class="filter" data-filter="waiting_human">Humano</button><button class="filter" data-filter="P0">P0</button></div>
+        <div id="conversationList" class="conversation-list"></div>
+      </aside>
+
+      <section class="panel operator-chat">
+        <div id="operatorEmpty" class="messages empty-state"><div class="empty-icon">◎</div><h3>Selecione um chamado</h3><p>A fila respeita o perfil selecionado e ordena primeiro os casos críticos.</p></div>
+        <div id="operatorConversation" class="hidden fill">
+          <div class="chat-head operator-head">
+            <div><div class="eyebrow" id="operatorChannel">CANAL</div><h2 id="operatorTicketTitle">Ticket</h2><p id="operatorTicketMeta"></p></div>
+            <div class="head-actions"><span id="operatorPriority" class="badge danger">P0</span><select id="statusSelect"><option value="waiting_human">Aguardando humano</option><option value="in_progress">Em atendimento</option><option value="resolved">Resolvido</option></select></div>
+          </div>
+          <div id="operatorMessages" class="messages"></div>
+          <form id="operatorComposer" class="composer"><textarea id="operatorInput" rows="1" maxlength="1500" placeholder="Responder como atendente..."></textarea><button class="send">Responder</button></form>
+        </div>
+      </section>
+
+      <aside class="panel context-panel">
+        <div class="eyebrow">CONTEXTO DO CHAMADO</div>
+        <div id="ticketContext" class="context-empty">Selecione uma conversa para consultar rota, prioridade e eventos.</div>
+      </aside>
+    </section>
+  </main>
+  <div id="toast" class="toast"></div>
+  <script src="/app.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,9 @@
+{
+  "orders": [
+    {"id":"VERT-1001","customer_id":"cliente-ana","status":"Em transporte","updated_at":"2026-09-20T10:30:00-03:00","detail":"Pedido saiu do centro de distribuição e segue em transporte.","tracking_url":"https://rastreamento.exemplo.test/VERT-1001"},
+    {"id":"VERT-1002","customer_id":"cliente-ana","status":"Atrasado","updated_at":"2026-09-20T09:10:00-03:00","detail":"Entrega ultrapassou a previsão e precisa de acompanhamento da Logística.","tracking_url":"https://rastreamento.exemplo.test/VERT-1002"},
+    {"id":"VERT-2001","customer_id":"cliente-bruno","status":"Entregue","updated_at":"2026-09-19T16:45:00-03:00","detail":"Entrega confirmada no endereço cadastrado.","tracking_url":"https://rastreamento.exemplo.test/VERT-2001"},
+    {"id":"VERT-3001","customer_id":"cliente-carla","status":"Preparando envio","updated_at":"2026-09-20T08:20:00-03:00","detail":"Pagamento aprovado e pedido em separação.","tracking_url":"https://rastreamento.exemplo.test/VERT-3001"}
+  ]
+}
+

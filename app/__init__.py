@@ -1,0 +1,2 @@
+"""Protótipo integrado Vértice."""
+

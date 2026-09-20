@@ -1,0 +1,8 @@
+{
+  "conversations": [
+    {"id":"T-1001","customer_id":"cliente-ana","channel":"WhatsApp","subject":"Onde está meu pedido?","team":"Atendimento","priority":"P3","score":18.5,"status":"bot","messages":[{"author_type":"customer","author_name":"Ana Souza","text":"Quero saber onde está o pedido VERT-1001."}]},
+    {"id":"T-1002","customer_id":"cliente-bruno","channel":"Reclame Aqui","subject":"Cobrança desconhecida","team":"Financeiro","priority":"P0","score":100,"status":"waiting_human","messages":[{"author_type":"customer","author_name":"Bruno Lima","text":"Apareceu uma cobrança que eu não reconheço no meu cartão."},{"author_type":"bot","author_name":"Assistente Vértice","text":"Vou encaminhar seu caso ao Financeiro especializado. Não envie senha, CVV ou o número completo do cartão."}]},
+    {"id":"T-1003","customer_id":"cliente-carla","channel":"E-mail","subject":"Troca de tamanho","team":"Trocas e pós-venda","priority":"P1","score":78.2,"status":"waiting_human","messages":[{"author_type":"customer","author_name":"Carla Mendes","text":"O tamanho não serviu e preciso trocar meu produto."}]}
+  ]
+}
+
