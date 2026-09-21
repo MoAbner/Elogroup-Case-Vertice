@@ -5259,6 +5259,1401 @@ body.bc-focus .section-launch.focus-panel .section-header{
     padding:10px 0;
   }
 }
+</style><style>
+/* ===== V29 · NOVO MODELO FINANCEIRO ===== */
+
+.managed-db-note-v29{
+  display:block!important;
+  margin-top:6px;
+  font-size:7px!important;
+  line-height:1.4;
+  color:#7A6F55!important;
+}
+
+.financial-v29{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+.finance-hero-v29{
+  display:grid;
+  grid-template-columns:1.35fr .65fr;
+  gap:18px;
+  align-items:center;
+  padding:20px 22px;
+  border-radius:16px;
+  background:linear-gradient(135deg,#F4F0FA,#FAF8FD 62%,#FFF);
+  border:1px solid #E1D7EB;
+}
+
+.fin29-eyebrow,
+.fin29-title>span{
+  display:block;
+  margin-bottom:6px;
+  font-size:8.5px;
+  text-transform:uppercase;
+  letter-spacing:.7px;
+  font-weight:900;
+  color:#797281;
+}
+
+.finance-hero-v29 h3,
+.fin29-title h3{
+  margin:0;
+  color:#272B34;
+  letter-spacing:-.28px;
+}
+
+.finance-hero-v29 h3{
+  font-size:17px;
+  line-height:1.25;
+}
+
+.finance-hero-v29 p{
+  margin:8px 0 0;
+  font-size:9px;
+  line-height:1.5;
+  color:#6C6872;
+}
+
+.finance-hero-number-v29{
+  text-align:right;
+  padding-left:18px;
+  border-left:1px solid #DDD4E7;
+}
+
+.finance-hero-number-v29 strong{
+  display:block;
+  font-size:31px;
+  line-height:1;
+  color:#7A0FA0;
+}
+
+.finance-hero-number-v29 span{
+  display:block;
+  margin-top:7px;
+  font-size:8px;
+  line-height:1.35;
+  color:#77707D;
+}
+
+.finance-grid-v29{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+}
+
+.fin29-card{
+  padding:20px;
+  border:1px solid #E4E7EC;
+  border-radius:16px;
+  background:#FFF;
+}
+
+.fin29-card.full{
+  grid-column:1 / -1;
+}
+
+.fin29-title{
+  margin-bottom:16px;
+}
+
+.fin29-title h3{
+  font-size:15px;
+  line-height:1.3;
+  max-width:560px;
+}
+
+/* Faixa HH */
+.hh-chart-v29,
+.be-chart-v29{
+  display:flex;
+  flex-direction:column;
+  gap:13px;
+  margin-top:8px;
+}
+
+.hh-row-v29,
+.be-row-v29{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:5px;
+}
+
+.hh-label-v29,
+.be-label-v29{
+  display:flex;
+  justify-content:space-between;
+  gap:14px;
+  align-items:center;
+}
+
+.hh-label-v29 span,
+.be-label-v29 span{
+  font-size:8px;
+  color:#666D76;
+}
+
+.hh-label-v29 strong{
+  font-size:8.5px;
+  color:#3E4550;
+}
+
+.be-label-v29 strong{
+  font-size:9px;
+  color:#7A0FA0;
+}
+
+.hh-track-v29,
+.be-track-v29{
+  height:16px;
+  border-radius:999px;
+  background:#EFF1F4;
+  overflow:hidden;
+}
+
+.hh-track-v29 i{
+  display:block;
+  height:100%;
+  border-radius:999px;
+  background:linear-gradient(90deg,#7C86A0,#515B72);
+}
+
+.be-track-v29 i{
+  display:block;
+  height:100%;
+  border-radius:999px;
+  background:linear-gradient(90deg,#CB80DD,#9B14C4);
+}
+
+.fin29-note{
+  margin-top:14px;
+  padding:10px 11px;
+  border-radius:10px;
+  background:#F7F8FA;
+  border:1px solid #E7E9ED;
+  font-size:7.7px;
+  line-height:1.45;
+  color:#717782;
+}
+
+.break-even-highlight-v29{
+  margin-top:14px;
+  padding:12px;
+  border-radius:11px;
+  text-align:center;
+  background:#F7F0FA;
+  border:1px solid #E3D4E9;
+}
+
+.break-even-highlight-v29 strong{
+  display:block;
+  font-size:23px;
+  color:#7A0FA0;
+}
+
+.break-even-highlight-v29 span{
+  display:block;
+  margin-top:4px;
+  font-size:7.5px;
+  color:#756E7B;
+}
+
+/* Cenários */
+.scenario-chart-v29{
+  height:245px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:28px;
+  align-items:end;
+  padding:8px 50px 0;
+  border-bottom:1px solid #E3E6EA;
+  background:
+    linear-gradient(to bottom,
+      transparent 32.8%,#F0F2F4 33%,transparent 33.2%,
+      transparent 65.8%,#F0F2F4 66%,transparent 66.2%);
+}
+
+.fin-scenario-v29{
+  height:100%;
+  display:grid;
+  grid-template-rows:30px 1fr 25px 24px;
+  gap:4px;
+  text-align:center;
+}
+
+.fin-scenario-v29>strong{
+  align-self:end;
+  font-size:10px;
+  color:#40464D;
+}
+
+.fin-scenario-shell-v29{
+  width:72px;
+  height:160px;
+  justify-self:center;
+  align-self:end;
+  display:flex;
+  align-items:flex-end;
+  border-radius:10px 10px 0 0;
+  background:#F1F2F4;
+  overflow:hidden;
+}
+
+.fin-scenario-shell-v29 i{
+  display:block;
+  width:100%;
+  min-height:8px;
+  border-radius:10px 10px 0 0;
+}
+
+.fin-scenario-v29.amber i{background:linear-gradient(180deg,#EAC25E,#D49A16)}
+.fin-scenario-v29.purple i{background:linear-gradient(180deg,#CB80DD,#9B14C4)}
+.fin-scenario-v29.green i{background:linear-gradient(180deg,#6CB486,#2F7C50)}
+
+.fin-scenario-v29>span{
+  font-size:8px;
+  font-weight:850;
+  color:#5F666D;
+}
+
+.fin-scenario-v29>small{
+  font-size:7px;
+  color:#80868C;
+}
+
+.scenario-formula-v29{
+  margin-top:14px;
+  padding:10px 12px;
+  border-radius:10px;
+  background:#ECF7F2;
+  border:1px solid #D0E6DA;
+}
+
+.scenario-formula-v29 strong{
+  display:block;
+  margin-bottom:4px;
+  font-size:8px;
+  color:#2F6A49;
+}
+
+.scenario-formula-v29 span{
+  display:block;
+  font-size:7.8px;
+  line-height:1.4;
+  color:#64736A;
+}
+
+.scenario-disclaimer-v29{
+  margin-top:9px;
+  font-size:7.5px;
+  line-height:1.4;
+  color:#7D8288;
+}
+
+/* Custo recorrente e opção de banco */
+.optional-cost-v29{
+  background:#FAFBFD;
+}
+
+.recurring-cost-grid-v29{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
+}
+
+.recurring-cost-grid-v29>div{
+  padding:13px;
+  border-radius:11px;
+  background:#FFF;
+  border:1px solid #E5E8ED;
+}
+
+.recurring-cost-grid-v29 span{
+  display:block;
+  font-size:7.5px;
+  text-transform:uppercase;
+  letter-spacing:.35px;
+  font-weight:850;
+  color:#7A8087;
+}
+
+.recurring-cost-grid-v29 strong{
+  display:block;
+  margin-top:7px;
+  font-size:14px;
+  color:#303640;
+}
+
+.recurring-cost-grid-v29 small{
+  display:block;
+  margin-top:4px;
+  font-size:7.4px;
+  color:#767C83;
+}
+
+@media(max-width:980px){
+  .finance-hero-v29,
+  .finance-grid-v29{
+    grid-template-columns:1fr;
+  }
+
+  .finance-hero-number-v29{
+    text-align:left;
+    padding:14px 0 0;
+    border-left:0;
+    border-top:1px solid #DDD4E7;
+  }
+
+  .fin29-card.full{
+    grid-column:auto;
+  }
+
+  .recurring-cost-grid-v29{
+    grid-template-columns:1fr;
+  }
+}
+
+@media(max-width:680px){
+  .scenario-chart-v29{
+    grid-template-columns:1fr;
+    height:auto;
+    padding:8px 0 0;
+    border-bottom:0;
+  }
+
+  .fin-scenario-v29{
+    height:220px;
+  }
+}
+</style><style>
+/* ===== V30 · HH + AUTOMAÇÃO ===== */
+
+.cost-comparison-chart-v30{
+  height:270px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:22px;
+  align-items:end;
+  padding:10px 28px 0;
+  border-bottom:1px solid #E3E6EA;
+  background:
+    linear-gradient(to bottom,
+      transparent 24.8%,#F0F2F4 25%,transparent 25.2%,
+      transparent 49.8%,#F0F2F4 50%,transparent 50.2%,
+      transparent 74.8%,#F0F2F4 75%,transparent 75.2%);
+}
+
+.cost-column-v30{
+  height:100%;
+  display:grid;
+  grid-template-rows:32px 1fr 24px 28px;
+  gap:4px;
+  text-align:center;
+}
+
+.cost-column-v30>strong{
+  align-self:end;
+  font-size:9px;
+  color:#40464D;
+  white-space:nowrap;
+}
+
+.cost-column-shell-v30{
+  width:64px;
+  height:175px;
+  justify-self:center;
+  align-self:end;
+  display:flex;
+  align-items:flex-end;
+  border-radius:10px 10px 0 0;
+  background:#F1F2F4;
+  overflow:hidden;
+}
+
+.cost-column-shell-v30 i{
+  display:block;
+  width:100%;
+  min-height:8px;
+  border-radius:10px 10px 0 0;
+}
+
+.cost-column-v30.current i{background:linear-gradient(180deg,#9199AA,#626B7C)}
+.cost-column-v30.amber i{background:linear-gradient(180deg,#EAC25E,#D49A16)}
+.cost-column-v30.purple i{background:linear-gradient(180deg,#CB80DD,#9B14C4)}
+.cost-column-v30.green i{background:linear-gradient(180deg,#6CB486,#2F7C50)}
+
+.cost-column-v30>span{
+  font-size:7.8px;
+  line-height:1.2;
+  font-weight:850;
+  color:#5F666D;
+}
+
+.cost-column-v30>small{
+  font-size:6.8px;
+  line-height:1.2;
+  color:#80868C;
+}
+
+@media(max-width:680px){
+  .cost-comparison-chart-v30{
+    grid-template-columns:repeat(2,1fr);
+    height:auto;
+    padding:10px 0 0;
+    border-bottom:0;
+  }
+  .cost-column-v30{
+    height:230px;
+  }
+}
+</style><style>
+/* ===== V31 · BENEFÍCIOS DO RESUMO ===== */
+#summaryCard .benefit-grid-v16{
+  grid-template-columns:repeat(2,1fr);
+  gap:8px;
+}
+#summaryCard .benefit-grid-v16>div{
+  min-height:70px;
+}
+
+/* ===== V31 · HERO FINANCEIRO MAIS LIMPO ===== */
+#financialImpactCard .finance-hero-v29{
+  grid-template-columns:1fr;
+}
+#financialImpactCard .finance-hero-v29 p{
+  max-width:760px;
+}
+
+/* ===== V31 · GRÁFICO LOLLIPOP DE HH ===== */
+.hh-lollipop-v31{
+  margin-top:6px;
+  padding:12px 8px 6px;
+}
+
+.hh-axis-v31{
+  display:flex;
+  justify-content:space-between;
+  margin:0 0 6px 0;
+  padding:0 2px;
+}
+.hh-axis-v31 span{
+  font-size:7px;
+  color:#7B828A;
+}
+
+.hh-lollipop-plot-v31{
+  position:relative;
+  height:190px;
+  border-bottom:2px solid #D8E7E7;
+  background:
+    linear-gradient(to right,
+      transparent 32.9%, #EAF1F1 33%, transparent 33.2%,
+      transparent 65.9%, #EAF1F1 66%, transparent 66.2%);
+}
+
+.hh-lollipop-item-v31{
+  position:absolute;
+  bottom:0;
+  width:1px;
+  height:148px;
+  transform:translateX(-50%);
+  background:#1B8B8B;
+}
+
+.hh-lollipop-item-v31::after{
+  content:"";
+  position:absolute;
+  top:-8px;
+  left:50%;
+  width:16px;
+  height:16px;
+  border-radius:50%;
+  transform:translateX(-50%);
+  background:#1B8B8B;
+  border:3px solid #E8F7F7;
+  box-shadow:0 0 0 1px rgba(27,139,139,.25);
+}
+
+.hh-lollipop-item-v31.low{
+  height:98px;
+  background:#5CB5B5;
+}
+.hh-lollipop-item-v31.low::after{
+  background:#5CB5B5;
+}
+
+.hh-lollipop-item-v31.ref{
+  height:128px;
+  background:#087878;
+}
+.hh-lollipop-item-v31.ref::after{
+  background:#087878;
+  width:19px;
+  height:19px;
+}
+
+.hh-lollipop-item-v31.high{
+  height:158px;
+  background:#2D9E9E;
+}
+.hh-lollipop-item-v31.high::after{
+  background:#2D9E9E;
+}
+
+.hh-lollipop-item-v31 strong{
+  position:absolute;
+  top:-34px;
+  left:50%;
+  transform:translateX(-50%);
+  white-space:nowrap;
+  font-size:8px;
+  color:#246E6E;
+}
+
+.hh-lollipop-item-v31 span{
+  position:absolute;
+  bottom:-27px;
+  left:50%;
+  transform:translateX(-50%);
+  white-space:nowrap;
+  font-size:7px;
+  color:#707981;
+}
+
+.hh-lollipop-item-v31 i{
+  display:none;
+}
+
+@media(max-width:700px){
+  .hh-lollipop-v31{
+    overflow-x:auto;
+  }
+  .hh-lollipop-plot-v31{
+    min-width:520px;
+  }
+  .hh-axis-v31{
+    min-width:520px;
+  }
+}
+</style><style>
+/* ===== V32 · GRÁFICO HH COMPACTO ===== */
+
+.hh-columns-v32{
+  display:grid;
+  grid-template-columns:46px 1fr;
+  gap:8px;
+  height:185px;
+  margin-top:8px;
+}
+
+.hh-y-v32{
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  padding-bottom:24px;
+  text-align:right;
+}
+
+.hh-y-v32 span{
+  font-size:7px;
+  color:#7A8188;
+}
+
+.hh-plot-v32{
+  position:relative;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+  align-items:end;
+  padding:0 18px 0;
+  border-left:1px solid #D9E7E7;
+  border-bottom:1px solid #D9E7E7;
+}
+
+.hh-grid-v32{
+  position:absolute;
+  left:0;
+  right:0;
+  height:1px;
+  background:#ECF2F2;
+}
+
+.hh-grid-v32.g1{top:0}
+.hh-grid-v32.g2{top:33.33%}
+.hh-grid-v32.g3{top:66.66%}
+
+.hh-col-v32{
+  position:relative;
+  z-index:2;
+  height:100%;
+  display:grid;
+  grid-template-rows:24px 1fr 24px;
+  text-align:center;
+}
+
+.hh-col-v32>strong{
+  align-self:end;
+  font-size:8.5px;
+  color:#315F63;
+  white-space:nowrap;
+}
+
+.hh-col-shell-v32{
+  width:58px;
+  height:120px;
+  justify-self:center;
+  align-self:end;
+  display:flex;
+  align-items:flex-end;
+  border-radius:9px 9px 0 0;
+  background:#EEF5F5;
+  overflow:hidden;
+}
+
+.hh-col-shell-v32 i{
+  display:block;
+  width:100%;
+  min-height:8px;
+  border-radius:9px 9px 0 0;
+}
+
+.hh-col-v32.low i{background:#8BC9C9}
+.hh-col-v32.ref i{background:#0F7F86}
+.hh-col-v32.high i{background:#45A6AA}
+
+.hh-col-v32.ref .hh-col-shell-v32{
+  box-shadow:0 0 0 2px rgba(15,127,134,.12);
+}
+
+.hh-col-v32>span{
+  align-self:center;
+  font-size:7px;
+  font-weight:800;
+  color:#677078;
+  white-space:nowrap;
+}
+
+@media(max-width:700px){
+  .hh-columns-v32{
+    height:175px;
+  }
+  .hh-plot-v32{
+    gap:10px;
+    padding:0 6px;
+  }
+  .hh-col-shell-v32{
+    width:44px;
+  }
+}
+</style><style>
+/* ===== V33 · IMPACTO EM MARGEM E RECEITA ===== */
+
+.economic-cards-v33{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+
+.economic-card-v33{
+  padding:16px;
+  border-radius:13px;
+  border:1px solid #E4E7EC;
+}
+
+.economic-card-v33.margin{
+  background:#EEF8F3;
+  border-color:#CFE5D8;
+}
+
+.economic-card-v33.revenue{
+  background:#EEF3FF;
+  border-color:#D3DCFA;
+}
+
+.economic-card-v33>span{
+  display:block;
+  font-size:7.5px;
+  text-transform:uppercase;
+  letter-spacing:.45px;
+  font-weight:850;
+  color:#777E86;
+}
+
+.economic-card-v33>strong{
+  display:block;
+  margin-top:8px;
+  font-size:25px;
+  line-height:1;
+}
+
+.economic-card-v33.margin>strong{
+  color:#2F7C50;
+}
+
+.economic-card-v33.revenue>strong{
+  color:#3947F3;
+}
+
+.economic-card-v33>b{
+  display:block;
+  margin-top:8px;
+  font-size:7.8px;
+  color:#606870;
+}
+
+.economic-card-v33>p{
+  margin:7px 0 0;
+  font-size:7.8px;
+  line-height:1.45;
+  color:#70777F;
+}
+
+#summaryCard .benefit-margin-v33{
+  background:#EEF8F3;
+  border-color:#CFE5D8;
+}
+
+#summaryCard .benefit-revenue-v33{
+  background:#EEF3FF;
+  border-color:#D3DCFA;
+}
+
+@media(max-width:760px){
+  .economic-cards-v33{
+    grid-template-columns:1fr;
+  }
+}
+</style><style>
+/* ===== V34 · BENEFÍCIOS PROJETADOS PADRONIZADOS ===== */
+#summaryCard .benefit-grid-v16{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:8px;
+}
+#summaryCard .benefit-grid-v16>div{
+  min-height:68px;
+  padding:11px 12px!important;
+  border:1px solid #E5E8EF!important;
+  border-radius:10px!important;
+  background:#FAFBFD!important;
+  color:#303640!important;
+}
+#summaryCard .benefit-grid-v16>div strong{
+  display:block;
+  color:#303640!important;
+  font-size:13px!important;
+}
+#summaryCard .benefit-grid-v16>div span{
+  display:block;
+  margin-top:4px;
+  color:#747B84!important;
+  font-size:7.4px!important;
+  line-height:1.35!important;
+}
+
+/* ===== V34 · PAYBACK ===== */
+.payback-v34{display:flex;flex-direction:column;gap:14px}
+.payback-hero-v34{
+  display:grid;
+  grid-template-columns:1.35fr .65fr;
+  gap:18px;
+  align-items:center;
+  padding:20px 22px;
+  border-radius:16px;
+  background:linear-gradient(135deg,#EAF7F5,#F7FBFA 58%,#FFF);
+  border:1px solid #CDE4E0;
+}
+.pb34-eyebrow,.pb34-title>span{
+  display:block;
+  margin-bottom:6px;
+  font-size:8.5px;
+  text-transform:uppercase;
+  letter-spacing:.7px;
+  font-weight:900;
+  color:#6F7C78;
+}
+.payback-hero-v34 h3,.pb34-title h3{margin:0;color:#242832;letter-spacing:-.28px}
+.payback-hero-v34 h3{font-size:17px;line-height:1.25}
+.payback-hero-v34 p{margin:8px 0 0;font-size:9px;line-height:1.5;color:#636F6B}
+.payback-main-v34{
+  text-align:right;
+  padding-left:18px;
+  border-left:1px solid #D3E6E3;
+}
+.payback-main-v34 strong{display:block;font-size:29px;line-height:1;color:#237D76}
+.payback-main-v34 span{display:block;margin-top:6px;font-size:8px;line-height:1.35;color:#6C7976}
+
+.payback-kpis-v34{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:9px;
+}
+.pb34-kpi{padding:14px;border-radius:12px;border:1px solid transparent}
+.pb34-kpi span{display:block;font-size:7.5px;text-transform:uppercase;letter-spacing:.45px;font-weight:850}
+.pb34-kpi strong{display:block;margin-top:7px;font-size:17px}
+.pb34-kpi small{display:block;margin-top:5px;font-size:7.4px;line-height:1.3}
+.pb34-kpi.purple{background:#F6ECFA;border-color:#E3CFEA;color:#7A0FA0}
+.pb34-kpi.green{background:#EBF6EF;border-color:#CCE3D4;color:#286C43}
+.pb34-kpi.blue{background:#EDF2FF;border-color:#CFD8FF;color:#3340C4}
+.pb34-kpi.amber{background:#FFF5DC;border-color:#EBD9A4;color:#87650F}
+
+.payback-grid-v34{display:grid;grid-template-columns:1.1fr .9fr;gap:14px}
+.payback-cross-card-v34,.payback-scenarios-card-v34{
+  padding:20px;border-radius:16px;border:1px solid #DDE8E5;background:#FFF
+}
+.pb34-title{margin-bottom:14px}
+.pb34-title h3{font-size:15px;line-height:1.25}
+
+.pb-cross-visual-v34{display:grid;grid-template-columns:58px 1fr;gap:8px;height:235px}
+.pb-cross-y-v34{
+  display:flex;flex-direction:column;justify-content:space-between;
+  padding-bottom:28px;text-align:right
+}
+.pb-cross-y-v34 span{font-size:7px;color:#7A8084}
+.pb-cross-plot-v34{
+  position:relative;border-left:1px solid #E2E6E8;border-bottom:1px solid #E2E6E8;
+  margin-bottom:28px;
+  background:linear-gradient(to bottom,
+    transparent 24.8%,#EDF0F1 25%,transparent 25.2%,
+    transparent 49.8%,#EDF0F1 50%,transparent 50.2%,
+    transparent 74.8%,#EDF0F1 75%,transparent 75.2%);
+}
+.pb-cross-plot-v34 svg{position:absolute;inset:0}
+.pb-cross-label-v34{
+  position:absolute;z-index:2;padding:3px 6px;border-radius:6px;background:#FFF;
+  font-size:7px;font-weight:800
+}
+.pb-cross-label-v34.cost{right:8px;top:39%;color:#7A0FA0}
+.pb-cross-label-v34.point{left:51%;top:35%;color:#286D44}
+.pb-cross-x-v34{
+  position:absolute;left:0;right:0;bottom:-22px;display:flex;justify-content:space-between
+}
+.pb-cross-x-v34 span{font-size:7px;color:#798085}
+.pb-cross-legend-v34{display:flex;justify-content:center;gap:18px;font-size:7.5px;color:#737D79}
+.pb-cross-legend-v34 i{
+  display:inline-block;width:20px;height:3px;vertical-align:middle;margin-right:5px
+}
+.pb-cross-legend-v34 .benefit{background:#2F7C50}
+.pb-cross-legend-v34 .cost{background:#9B14C4}
+.pb34-secondary{
+  margin-top:11px;padding:9px 10px;border-radius:9px;background:#F8FAF9;
+  border:1px solid #E3E9E6;font-size:7.5px;line-height:1.4;color:#727A76
+}
+.pb34-secondary strong{color:#286D44}
+
+.payback-bars-v34{
+  height:245px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px;
+  align-items:end;padding:10px 8px 0;border-bottom:1px solid #E2E6E8
+}
+.pbbar-v34{
+  height:100%;display:grid;grid-template-rows:30px 1fr 25px 28px;gap:4px;text-align:center
+}
+.pbbar-v34>strong{align-self:end;font-size:9px;color:#42484C;white-space:nowrap}
+.pbbar-shell-v34{
+  width:58px;height:150px;justify-self:center;align-self:end;display:flex;align-items:flex-end;
+  border-radius:9px 9px 0 0;background:#F0F2F3;overflow:hidden
+}
+.pbbar-shell-v34 i{display:block;width:100%;min-height:8px;border-radius:9px 9px 0 0}
+.pbbar-v34.amber i{background:linear-gradient(180deg,#EAC25E,#D49A16)}
+.pbbar-v34.purple i{background:linear-gradient(180deg,#CB80DD,#9B14C4)}
+.pbbar-v34.green i{background:linear-gradient(180deg,#6CB486,#2F7C50)}
+.pbbar-v34>span{font-size:7.6px;line-height:1.15;font-weight:800;color:#5E6468}
+.pbbar-v34>small{font-size:6.7px;line-height:1.2;color:#7A8084}
+.pb34-premise{
+  margin-top:12px;padding:10px 11px;border-radius:10px;background:#F8FAF9;border:1px solid #E3E9E6
+}
+.pb34-premise strong{display:block;margin-bottom:4px;font-size:8px;color:#4C5B56}
+.pb34-premise span{display:block;font-size:7.7px;line-height:1.4;color:#747D79}
+
+@media(max-width:980px){
+  .payback-hero-v34,.payback-grid-v34{grid-template-columns:1fr}
+  .payback-main-v34{
+    text-align:left;padding:14px 0 0;border-left:0;border-top:1px solid #D3E6E3
+  }
+  .payback-kpis-v34{grid-template-columns:1fr 1fr}
+}
+@media(max-width:620px){
+  .payback-kpis-v34{grid-template-columns:1fr}
+}
+</style><style>
+/* ===== V35 · BENEFÍCIOS: 8 CARDS COLORIDOS E IGUAIS ===== */
+#summaryCard .benefit-grid-v16{
+  display:grid!important;
+  grid-template-columns:repeat(2,1fr)!important;
+  gap:8px!important;
+}
+#summaryCard .benefit-grid-v16>div{
+  min-height:68px!important;
+  padding:11px 12px!important;
+  border-radius:10px!important;
+  border:1px solid transparent!important;
+}
+#summaryCard .benefit-grid-v16>div strong{
+  display:block!important;
+  font-size:13px!important;
+  color:inherit!important;
+}
+#summaryCard .benefit-grid-v16>div span{
+  display:block!important;
+  margin-top:4px!important;
+  font-size:7.4px!important;
+  line-height:1.35!important;
+  color:inherit!important;
+  opacity:.82;
+}
+
+#summaryCard .benefit-blue-v35{background:#EDF2FF!important;border-color:#CFD8FF!important;color:#3340C4!important}
+#summaryCard .benefit-purple-v35{background:#F6ECFA!important;border-color:#E3CFEA!important;color:#7A0FA0!important}
+#summaryCard .benefit-green-v35{background:#EBF6EF!important;border-color:#CCE3D4!important;color:#286C43!important}
+#summaryCard .benefit-amber-v35{background:#FFF5DC!important;border-color:#EBD9A4!important;color:#87650F!important}
+#summaryCard .benefit-teal-v35{background:#EAF7F5!important;border-color:#CDE4E0!important;color:#237D76!important}
+#summaryCard .benefit-indigo-v35{background:#F0EFFF!important;border-color:#D8D5F5!important;color:#574CC2!important}
+#summaryCard .benefit-mint-v35{background:#EFF8F2!important;border-color:#D5E8DB!important;color:#367052!important}
+#summaryCard .benefit-sky-v35{background:#EEF7FB!important;border-color:#D2E6EF!important;color:#35718A!important}
+
+/* ===== V35 · PAYBACK ===== */
+.payback-v35{display:flex;flex-direction:column;gap:14px}
+.payback-hero-v35{
+  display:grid;grid-template-columns:1.35fr .65fr;gap:18px;align-items:center;
+  padding:20px 22px;border-radius:16px;
+  background:linear-gradient(135deg,#EAF7F5,#F7FBFA 58%,#FFF);
+  border:1px solid #CDE4E0
+}
+.pb35-eyebrow,.pb35-title>span{
+  display:block;margin-bottom:6px;font-size:8.5px;text-transform:uppercase;
+  letter-spacing:.7px;font-weight:900;color:#6F7C78
+}
+.payback-hero-v35 h3,.pb35-title h3{margin:0;color:#242832;letter-spacing:-.28px}
+.payback-hero-v35 h3{font-size:17px;line-height:1.25}
+.payback-hero-v35 p{margin:8px 0 0;font-size:9px;line-height:1.5;color:#636F6B}
+.payback-main-v35{text-align:right;padding-left:18px;border-left:1px solid #D3E6E3}
+.payback-main-v35 strong{display:block;font-size:29px;line-height:1;color:#237D76}
+.payback-main-v35 span{display:block;margin-top:6px;font-size:8px;line-height:1.35;color:#6C7976}
+
+.payback-kpis-v35{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}
+.pb35-kpi{padding:14px;border-radius:12px;border:1px solid transparent}
+.pb35-kpi span{display:block;font-size:7.5px;text-transform:uppercase;letter-spacing:.45px;font-weight:850}
+.pb35-kpi strong{display:block;margin-top:7px;font-size:17px}
+.pb35-kpi small{display:block;margin-top:5px;font-size:7.4px;line-height:1.3}
+.pb35-kpi.purple{background:#F6ECFA;border-color:#E3CFEA;color:#7A0FA0}
+.pb35-kpi.green{background:#EBF6EF;border-color:#CCE3D4;color:#286C43}
+.pb35-kpi.blue{background:#EDF2FF;border-color:#CFD8FF;color:#3340C4}
+.pb35-kpi.amber{background:#FFF5DC;border-color:#EBD9A4;color:#87650F}
+
+.payback-grid-v35{display:grid;grid-template-columns:1.1fr .9fr;gap:14px}
+.payback-cross-card-v35,.payback-scenarios-card-v35{
+  padding:20px;border-radius:16px;border:1px solid #DDE8E5;background:#FFF
+}
+.pb35-title{margin-bottom:14px}
+.pb35-title h3{font-size:15px;line-height:1.25}
+
+.pb-cross-visual-v35{display:grid;grid-template-columns:58px 1fr;gap:8px;height:235px}
+.pb-cross-y-v35{
+  display:flex;flex-direction:column;justify-content:space-between;
+  padding-bottom:28px;text-align:right
+}
+.pb-cross-y-v35 span{font-size:7px;color:#7A8084}
+.pb-cross-plot-v35{
+  position:relative;border-left:1px solid #E2E6E8;border-bottom:1px solid #E2E6E8;
+  margin-bottom:28px;
+  background:linear-gradient(to bottom,
+    transparent 24.8%,#EDF0F1 25%,transparent 25.2%,
+    transparent 49.8%,#EDF0F1 50%,transparent 50.2%,
+    transparent 74.8%,#EDF0F1 75%,transparent 75.2%)
+}
+.pb-cross-plot-v35 svg{position:absolute;inset:0}
+.pb-cross-label-v35{
+  position:absolute;z-index:2;padding:3px 6px;border-radius:6px;background:#FFF;
+  font-size:7px;font-weight:800
+}
+.pb-cross-label-v35.cost{right:8px;top:23%;color:#7A0FA0}
+.pb-cross-label-v35.point{left:73%;top:20%;color:#286D44}
+.pb-cross-x-v35{
+  position:absolute;left:0;right:0;bottom:-22px;display:flex;justify-content:space-between
+}
+.pb-cross-x-v35 span{font-size:7px;color:#798085}
+.pb-cross-legend-v35{display:flex;justify-content:center;gap:18px;font-size:7.5px;color:#737D79}
+.pb-cross-legend-v35 i{display:inline-block;width:20px;height:3px;vertical-align:middle;margin-right:5px}
+.pb-cross-legend-v35 .benefit{background:#2F7C50}
+.pb-cross-legend-v35 .cost{background:#9B14C4}
+.pb35-secondary{
+  margin-top:11px;padding:9px 10px;border-radius:9px;background:#F8FAF9;
+  border:1px solid #E3E9E6;font-size:7.5px;line-height:1.4;color:#727A76
+}
+.pb35-secondary strong{color:#286D44}
+
+.payback-bars-v35{
+  height:245px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px;
+  align-items:end;padding:10px 8px 0;border-bottom:1px solid #E2E6E8
+}
+.pbbar-v35{
+  height:100%;display:grid;grid-template-rows:30px 1fr 25px 28px;gap:4px;text-align:center
+}
+.pbbar-v35>strong{align-self:end;font-size:9px;color:#42484C;white-space:nowrap}
+.pbbar-shell-v35{
+  width:58px;height:150px;justify-self:center;align-self:end;display:flex;align-items:flex-end;
+  border-radius:9px 9px 0 0;background:#F0F2F3;overflow:hidden
+}
+.pbbar-shell-v35 i{display:block;width:100%;min-height:8px;border-radius:9px 9px 0 0}
+.pbbar-v35.amber i{background:linear-gradient(180deg,#EAC25E,#D49A16)}
+.pbbar-v35.purple i{background:linear-gradient(180deg,#CB80DD,#9B14C4)}
+.pbbar-v35.green i{background:linear-gradient(180deg,#6CB486,#2F7C50)}
+.pbbar-v35>span{font-size:7.6px;line-height:1.15;font-weight:800;color:#5E6468}
+.pbbar-v35>small{font-size:6.7px;line-height:1.2;color:#7A8084}
+.pb35-premise{
+  margin-top:12px;padding:10px 11px;border-radius:10px;background:#F8FAF9;border:1px solid #E3E9E6
+}
+.pb35-premise strong{display:block;margin-bottom:4px;font-size:8px;color:#4C5B56}
+.pb35-premise span{display:block;font-size:7.7px;line-height:1.4;color:#747D79}
+
+@media(max-width:980px){
+  .payback-hero-v35,.payback-grid-v35{grid-template-columns:1fr}
+  .payback-main-v35{text-align:left;padding:14px 0 0;border-left:0;border-top:1px solid #D3E6E3}
+  .payback-kpis-v35{grid-template-columns:1fr 1fr}
+}
+@media(max-width:620px){
+  .payback-kpis-v35{grid-template-columns:1fr}
+}
+</style><style>
+/* ===== V36 · CORREÇÃO DEFINITIVA DOS 8 CARDS DE BENEFÍCIOS ===== */
+#summaryCard .exec-card.benefits .benefit-grid > div{
+  box-shadow:none!important;
+}
+</style><style>
+/* ===== V37 · DOIS CENÁRIOS DE PAYBACK ===== */
+.payback-v37{display:flex;flex-direction:column;gap:14px}
+
+.payback-hero-v37{
+  padding:18px 20px;
+  border-radius:16px;
+  background:linear-gradient(135deg,#EAF7F5,#F7FBFA 58%,#FFF);
+  border:1px solid #CDE4E0;
+}
+.pb37-eyebrow,.dual-pb-head-v37>span{
+  display:block;
+  margin-bottom:6px;
+  font-size:8.5px;
+  text-transform:uppercase;
+  letter-spacing:.7px;
+  font-weight:900;
+  color:#6F7C78;
+}
+.payback-hero-v37 h3,.dual-pb-head-v37 h3{
+  margin:0;
+  color:#242832;
+  letter-spacing:-.28px;
+}
+.payback-hero-v37 h3{font-size:17px}
+.payback-hero-v37 p{
+  margin:8px 0 0;
+  font-size:9px;
+  line-height:1.5;
+  color:#636F6B;
+}
+
+.dual-payback-grid-v37{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+}
+
+.dual-payback-card-v37{
+  padding:18px;
+  border-radius:16px;
+  border:1px solid #E0E6E4;
+  background:#FFF;
+}
+.dual-payback-card-v37.automation{
+  background:#F7F3FA;
+  border-color:#E4D7E9;
+}
+.dual-payback-card-v37.full{
+  background:#F1F8F5;
+  border-color:#D6E7DE;
+}
+
+.dual-pb-head-v37{margin-bottom:13px}
+.dual-pb-head-v37 h3{
+  font-size:14px;
+  line-height:1.25;
+}
+
+.dual-pb-highlight-v37{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px;
+  margin-bottom:14px;
+}
+.dual-pb-highlight-v37>div{
+  padding:11px;
+  border-radius:10px;
+  background:#FFF;
+  border:1px solid rgba(0,0,0,.06);
+}
+.dual-pb-highlight-v37 span{
+  display:block;
+  font-size:7.2px;
+  text-transform:uppercase;
+  letter-spacing:.4px;
+  font-weight:850;
+  color:#767D83;
+}
+.dual-pb-highlight-v37 strong{
+  display:block;
+  margin-top:6px;
+  font-size:18px;
+  color:#303640;
+}
+
+.dual-pb-bars-v37{
+  height:220px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+  align-items:end;
+  padding:8px 6px 0;
+  border-bottom:1px solid #DDE3E1;
+}
+
+.dual-pb-bar-v37{
+  height:100%;
+  display:grid;
+  grid-template-rows:28px 1fr 24px 26px;
+  gap:3px;
+  text-align:center;
+}
+.dual-pb-bar-v37>strong{
+  align-self:end;
+  font-size:9px;
+  color:#41474C;
+  white-space:nowrap;
+}
+.dual-pb-shell-v37{
+  width:52px;
+  height:135px;
+  justify-self:center;
+  align-self:end;
+  display:flex;
+  align-items:flex-end;
+  border-radius:9px 9px 0 0;
+  background:#ECEFEE;
+  overflow:hidden;
+}
+.dual-pb-shell-v37 i{
+  display:block;
+  width:100%;
+  min-height:8px;
+  border-radius:9px 9px 0 0;
+}
+.dual-pb-bar-v37.amber i{background:linear-gradient(180deg,#EAC25E,#D49A16)}
+.dual-pb-bar-v37.purple i{background:linear-gradient(180deg,#CB80DD,#9B14C4)}
+.dual-pb-bar-v37.green i{background:linear-gradient(180deg,#6CB486,#2F7C50)}
+.dual-pb-bar-v37>span{
+  font-size:7.3px;
+  font-weight:850;
+  color:#62696E;
+}
+.dual-pb-bar-v37>small{
+  font-size:6.6px;
+  line-height:1.15;
+  color:#7E8589;
+}
+
+.dual-pb-note-v37{
+  margin-top:10px;
+  padding:8px 9px;
+  border-radius:9px;
+  background:rgba(255,255,255,.72);
+  border:1px solid rgba(0,0,0,.05);
+  font-size:7.4px;
+  line-height:1.4;
+  color:#70777C;
+}
+
+.payback-summary-v37{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:9px;
+}
+.payback-summary-v37>div{
+  padding:12px;
+  border-radius:11px;
+  border:1px solid #E4E7EC;
+  background:#FAFBFD;
+}
+.payback-summary-v37 span{
+  display:block;
+  font-size:7.2px;
+  text-transform:uppercase;
+  letter-spacing:.35px;
+  font-weight:850;
+  color:#7A8086;
+}
+.payback-summary-v37 strong{
+  display:block;
+  margin-top:6px;
+  font-size:14px;
+  color:#323941;
+}
+
+.payback-premise-v37{
+  padding:10px 11px;
+  border-radius:10px;
+  background:#F8FAF9;
+  border:1px solid #E3E9E6;
+}
+.payback-premise-v37 strong{
+  display:block;
+  margin-bottom:4px;
+  font-size:8px;
+  color:#4C5B56;
+}
+.payback-premise-v37 span{
+  display:block;
+  font-size:7.6px;
+  line-height:1.45;
+  color:#747D79;
+}
+
+@media(max-width:980px){
+  .dual-payback-grid-v37{grid-template-columns:1fr}
+}
+@media(max-width:650px){
+  .payback-summary-v37{grid-template-columns:1fr}
+  .dual-pb-highlight-v37{grid-template-columns:1fr}
+}
+</style><style>
+/* ===== V38 · MÉTRICAS DENTRO DO CENÁRIO 2 ===== */
+.scenario2-metrics-v38{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:8px;
+  margin:0 0 14px;
+}
+.scenario2-metrics-v38>div{
+  padding:10px 11px;
+  border-radius:10px;
+  background:#FFF;
+  border:1px solid rgba(47,124,80,.14);
+}
+.scenario2-metrics-v38 span{
+  display:block;
+  font-size:7px;
+  text-transform:uppercase;
+  letter-spacing:.35px;
+  font-weight:850;
+  color:#6F7773;
+}
+.scenario2-metrics-v38 strong{
+  display:block;
+  margin-top:6px;
+  font-size:14px;
+  color:#2F6E4A;
+}
+.scenario2-metrics-v38 small{
+  display:block;
+  margin-top:3px;
+  font-size:6.8px;
+  color:#7B837F;
+}
+@media(max-width:700px){
+  .scenario2-metrics-v38{
+    grid-template-columns:1fr;
+  }
+}
+</style><style>
+/* ===== V39 · MÉTRICAS DO CENÁRIO 1 ===== */
+.scenario1-metrics-v39{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:8px;
+  margin:0 0 14px;
+}
+.scenario1-metrics-v39>div{
+  padding:10px 11px;
+  border-radius:10px;
+  background:#FFF;
+  border:1px solid rgba(122,15,160,.14);
+}
+.scenario1-metrics-v39 span{
+  display:block;
+  font-size:7px;
+  text-transform:uppercase;
+  letter-spacing:.35px;
+  font-weight:850;
+  color:#756E79;
+}
+.scenario1-metrics-v39 strong{
+  display:block;
+  margin-top:6px;
+  font-size:14px;
+  color:#7A0FA0;
+}
+.scenario1-metrics-v39 small{
+  display:block;
+  margin-top:3px;
+  font-size:6.8px;
+  color:#817984;
+}
+@media(max-width:700px){
+  .scenario1-metrics-v39{
+    grid-template-columns:1fr;
+  }
+}
+</style><style>
+/* ===== V40 · LTV PROTEGIDO POR CENÁRIO DE CHURN ===== */
+.scenario1-metrics-v40{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:8px;
+  margin:0 0 14px;
+}
+.scenario1-metrics-v40>div{
+  padding:10px 11px;
+  border-radius:10px;
+  background:#FFF;
+  border:1px solid transparent;
+}
+.scenario1-metrics-v40 span{
+  display:block;
+  font-size:7px;
+  text-transform:uppercase;
+  letter-spacing:.35px;
+  font-weight:850;
+}
+.scenario1-metrics-v40 strong{
+  display:block;
+  margin-top:6px;
+  font-size:14px;
+}
+.scenario1-metrics-v40 small{
+  display:block;
+  margin-top:3px;
+  font-size:6.8px;
+  opacity:.78;
+}
+.scenario1-metrics-v40 .churn05{
+  background:#FFF5DC;
+  border-color:#EBD9A4;
+  color:#87650F;
+}
+.scenario1-metrics-v40 .churn10{
+  background:#F6ECFA;
+  border-color:#E3CFEA;
+  color:#7A0FA0;
+}
+.scenario1-metrics-v40 .churn20{
+  background:#EBF6EF;
+  border-color:#CCE3D4;
+  color:#286C43;
+}
+@media(max-width:700px){
+  .scenario1-metrics-v40{
+    grid-template-columns:1fr;
+  }
+}
 </style></head>
 <body>
 <main class="page">
@@ -5344,21 +6739,37 @@ body.bc-focus .section-launch.focus-panel .section-header{
 </div>
 </div>
 <div class="benefit-grid benefit-grid-v16">
-<div>
-<strong>R$ 175,4 mil</strong>
-<span>redução líquida potencial de custo no período comparável</span>
+<div class="benefit-blue-v35" style="background:#EDF2FF !important;border:1px solid #CFD8FF !important;color:#3340C4 !important;min-height:68px !important;padding:11px 12px !important;border-radius:10px !important;box-shadow:none !important;">
+<strong style="color:#3340C4 !important;display:block !important;font-size:13px !important;">R$ 12,5 mil/mês</strong>
+<span style="color:#3340C4 !important;display:block !important;margin-top:4px !important;font-size:7.4px !important;line-height:1.35 !important;opacity:.82 !important;">custo atual de HH usado como referência</span>
 </div>
-<div>
-<strong>11 → até 2 min</strong>
-<span>meta para a mediana da primeira resposta</span>
+<div class="benefit-purple-v35" style="background:#F6ECFA !important;border:1px solid #E3CFEA !important;color:#7A0FA0 !important;min-height:68px !important;padding:11px 12px !important;border-radius:10px !important;box-shadow:none !important;">
+<strong style="color:#7A0FA0 !important;display:block !important;font-size:13px !important;">R$ 8,6 mil/mês</strong>
+<span style="color:#7A0FA0 !important;display:block !important;margin-top:4px !important;font-size:7.4px !important;line-height:1.35 !important;opacity:.82 !important;">HH remanescente + automação no cenário de 40% autônomo</span>
 </div>
-<div>
-<strong>1,94%</strong>
-<span>equivalente à margem de contribuição observada</span>
+<div class="benefit-green-v35" style="background:#EBF6EF !important;border:1px solid #CCE3D4 !important;color:#286C43 !important;min-height:68px !important;padding:11px 12px !important;border-radius:10px !important;box-shadow:none !important;">
+<strong style="color:#286C43 !important;display:block !important;font-size:13px !important;">R$ 47,8 mil/ano</strong>
+<span style="color:#286C43 !important;display:block !important;margin-top:4px !important;font-size:7.4px !important;line-height:1.35 !important;opacity:.82 !important;">economia líquida no cenário de 40% autônomo</span>
 </div>
-<div>
-<strong>+1,05 p,p,</strong>
-<span>equivalente sobre a receita líquida do período</span>
+<div class="benefit-amber-v35" style="background:#FFF5DC !important;border:1px solid #EBD9A4 !important;color:#87650F !important;min-height:68px !important;padding:11px 12px !important;border-radius:10px !important;box-shadow:none !important;">
+<strong style="color:#87650F !important;display:block !important;font-size:13px !important;">8,3%</strong>
+<span style="color:#87650F !important;display:block !important;margin-top:4px !important;font-size:7.4px !important;line-height:1.35 !important;opacity:.82 !important;">resolução autônoma para atingir o ponto de equilíbrio</span>
+</div>
+<div class="benefit-teal-v35" style="background:#EAF7F5 !important;border:1px solid #CDE4E0 !important;color:#237D76 !important;min-height:68px !important;padding:11px 12px !important;border-radius:10px !important;box-shadow:none !important;">
+<strong style="color:#237D76 !important;display:block !important;font-size:13px !important;">11 → até 2 min</strong>
+<span style="color:#237D76 !important;display:block !important;margin-top:4px !important;font-size:7.4px !important;line-height:1.35 !important;opacity:.82 !important;">primeira resposta</span>
+</div>
+<div class="benefit-indigo-v35" style="background:#F0EFFF !important;border:1px solid #D8D5F5 !important;color:#574CC2 !important;min-height:68px !important;padding:11px 12px !important;border-radius:10px !important;box-shadow:none !important;">
+<strong style="color:#574CC2 !important;display:block !important;font-size:13px !important;">49h → ≈6h</strong>
+<span style="color:#574CC2 !important;display:block !important;margin-top:4px !important;font-size:7.4px !important;line-height:1.35 !important;opacity:.82 !important;">MTTR mediano estimado</span>
+</div>
+<div class="benefit-mint-v35" style="background:#EFF8F2 !important;border:1px solid #D5E8DB !important;color:#367052 !important;min-height:68px !important;padding:11px 12px !important;border-radius:10px !important;box-shadow:none !important;">
+<strong style="color:#367052 !important;display:block !important;font-size:13px !important;">0,56%</strong>
+<span style="color:#367052 !important;display:block !important;margin-top:4px !important;font-size:7.4px !important;line-height:1.35 !important;opacity:.82 !important;">impacto equivalente sobre a margem no cenário de 40% autônomo</span>
+</div>
+<div class="benefit-sky-v35" style="background:#EEF7FB !important;border:1px solid #D2E6EF !important;color:#35718A !important;min-height:68px !important;padding:11px 12px !important;border-radius:10px !important;box-shadow:none !important;">
+<strong style="color:#35718A !important;display:block !important;font-size:13px !important;">+0,31 p.p.</strong>
+<span style="color:#35718A !important;display:block !important;margin-top:4px !important;font-size:7.4px !important;line-height:1.35 !important;opacity:.82 !important;">impacto equivalente sobre a receita no cenário de 40% autônomo</span>
 </div>
 </div>
 </div>
@@ -5370,13 +6781,17 @@ body.bc-focus .section-launch.focus-panel .section-header{
 </div>
 </div>
 <div class="cost-simple-v16">
-<span>Custo anual estimado</span>
-<strong>R$ 12.441,44</strong>
-<small>R$ 1.036,79 por mês</small>
+<span>Custo anual estimado · HH + automação</span>
+<strong>R$ 102.790,23</strong>
+<small>R$ 8.565,85 por mês</small>
 </div>
 <div class="implementation-disclaimer-v24">
-<strong>Observação</strong>
-<span>O valor considera apenas a operação recorrente da solução, não considerando o investimento de implementação.</span>
+<strong>Cenário considerado</strong>
+<span>
+                40% de resolução autônoma: R$ 7.529,06/mês de HH remanescente
+                + R$ 1.036,79/mês de automação.
+                Não considera o investimento de implementação.
+              </span>
 </div></div>
 </div>
 </div>
@@ -5583,114 +6998,169 @@ body.bc-focus .section-launch.focus-panel .section-header{
 <div class="arrow">⌄</div>
 </div>
 <div class="section-content"><button class="focus-back" type="button">← Voltar para as seções</button>
-<div class="financial-v16">
-<div class="finance-hero-v16">
+<div class="financial-v29">
+<div class="finance-hero-v29">
 <div>
-<span class="fin16-eyebrow">Todo o Atendimento</span>
-<h3>Custo do Atendimento no período analisado entre 2023 e 2024</h3>
+<span class="fin29-eyebrow">Eficiência operacional</span>
+<h3>O custo pós-automação combina HH remanescente e custo recorrente da solução</h3>
 <p>
-          A operação de Atendimento registrou <strong>R$ 188,7 mil</strong>
-          em custo operacional no período comparável entre as bases.
-          Para o mesmo horizonte, o custo recorrente estimado da solução,
-          com reserva de canais, é de aproximadamente <strong>R$ 13,3 mil</strong>.
-        </p>
-</div>
-<div class="finance-hero-number-v16">
-<strong>R$ 175,4 mil</strong>
-<span>redução líquida potencial</span>
+              Referência: <strong>1.003,875 tickets/mês</strong>,
+              <strong>R$ 12,50 de HH por ticket</strong> e
+              <strong>R$ 1.036,79/mês</strong> de automação.
+            </p>
 </div>
 </div>
-<div class="finance-grid-v16">
-<div class="fin16-card bridge-card">
-<div class="fin16-title">
-<span>Ponte de custo</span>
-<h3>Do modelo atual para o novo custo operacional</h3>
+<div class="finance-grid-v29"><div class="fin29-card full economic-impact-v33">
+<div class="fin29-title">
+<span>Impacto econômico</span>
+<h3>Impacto sobre margem e receita</h3>
 </div>
-<div class="cost-bridge-v16">
-<div class="bridge-block current">
-<span>Custo atual</span>
-<strong>R$ 188,7 mil</strong>
+<div class="economic-cards-v33">
+<div class="economic-card-v33 margin">
+<span>Margem de contribuição</span>
+<strong>0,56%</strong>
+<b>Margem anualizada de referência: R$ 8,49 mi</b>
+<p>
+                No cenário de 40% de resolução autônoma, a economia líquida de
+                R$ 47,8 mil por ano equivale a 0,56%
+                da margem de contribuição.
+              </p>
 </div>
-<div class="bridge-arrow">
-<b>→</b>
-<span>−93,0%</span>
-</div>
-<div class="bridge-block solution">
-<span>Novo modelo</span>
-<strong>R$ 13,3 mil</strong>
-</div>
-</div>
-<div class="bridge-bar-v16">
-<i class="saving" style="width:93.0%"></i>
-<i class="remaining" style="width:7.0%"></i>
-</div>
-<div class="bridge-legend-v16">
-<span><i class="saving-dot"></i> redução de custo</span>
-<span><i class="remaining-dot"></i> custo remanescente</span>
-</div>
-<div class="net-saving-chip-v16">
-<span>Redução líquida potencial</span>
-<strong>R$ 175,4 mil</strong>
+<div class="economic-card-v33 revenue">
+<span>Receita líquida</span>
+<strong>+0,31 p.p.</strong>
+<b>Receita anualizada de referência: R$ 15,63 mi</b>
+<p>
+                A mesma economia líquida equivale a +0,31 p.p.
+                quando comparada à receita líquida.
+              </p>
 </div>
 </div>
-<div class="fin16-card monthly-card">
-<div class="fin16-title">
-<span>Run-rate mensal</span>
-<h3>Comparação mensal entre operação atual, solução e redução líquida</h3>
 </div>
-<div class="runrate-chart-v17">
-<div class="runrate-ylabels">
+<div class="fin29-card">
+<div class="fin29-title">
+<span>Custo atual de HH</span>
+<h3>Faixa mensal de HH</h3>
+</div>
+<div class="hh-columns-v32">
+<div class="hh-y-v32">
 <span>R$ 15 mil</span>
 <span>R$ 10 mil</span>
 <span>R$ 5 mil</span>
 <span>R$ 0</span>
 </div>
-<div class="runrate-plot">
-<div class="runrate-gridline g1"></div>
-<div class="runrate-gridline g2"></div>
-<div class="runrate-gridline g3"></div>
-<div class="runrate-gridline g4"></div>
-<div class="runrate-bar current">
-<strong>R$ 14,7 mil</strong>
-<div class="runrate-bar-shell"><i style="height:98.3%"></i></div>
-<span>Custo atual</span>
+<div class="hh-plot-v32">
+<div class="hh-grid-v32 g1"></div>
+<div class="hh-grid-v32 g2"></div>
+<div class="hh-grid-v32 g3"></div>
+<div class="hh-col-v32 low">
+<strong>R$ 10,0 mil</strong>
+<div class="hh-col-shell-v32">
+<i style="height:66.7%"></i>
 </div>
-<div class="runrate-bar solution">
-<strong>R$ 1.037</strong>
-<div class="runrate-bar-shell"><i style="height:6.9%"></i></div>
-<span>Solução</span>
+<span>R$ 10/ticket</span>
 </div>
-<div class="runrate-bar saving">
-<strong>R$ 13,7 mil</strong>
-<div class="runrate-bar-shell"><i style="height:91.4%"></i></div>
-<span>Redução líquida</span>
+<div class="hh-col-v32 ref">
+<strong>R$ 12,5 mil</strong>
+<div class="hh-col-shell-v32">
+<i style="height:83.3%"></i>
 </div>
+<span>R$ 12,50/ticket</span>
 </div>
+<div class="hh-col-v32 high">
+<strong>R$ 15,1 mil</strong>
+<div class="hh-col-shell-v32">
+<i style="height:100%"></i>
 </div>
-<div class="value-ratio-v17">
-<strong>13,2x</strong>
-<span>redução líquida potencial para cada R$ 1 gasto com a solução no período.</span>
-</div>
-</div>
-<div class="fin16-card impact-card-v16">
-<div class="fin16-title">
-<span>Impacto econômico</span>
-<h3>A redução de custo também é relevante frente aos resultados observados</h3>
-</div>
-<div class="economic-cards-v17">
-<div class="economic-card margin">
-<span>Impacto equivalente sobre a margem</span>
-<strong>1,94%</strong>
-<b>Margem de contribuição: R$ 9,06 mi</b>
-<p>A redução líquida potencial de R$ 175,4 mil corresponde a 1,94% da margem de contribuição observada.</p>
-</div>
-<div class="economic-card revenue">
-<span>Impacto equivalente sobre a receita</span>
-<strong>+1,05 p,p,</strong>
-<b>Receita líquida: R$ 16,67 mi</b>
-<p>O mesmo ganho corresponde a +1,05 p.p. quando comparado à receita líquida do período.</p>
+<span>R$ 15/ticket</span>
 </div>
 </div>
+</div>
+<div class="fin29-note">
+<strong>Referência adotada:</strong> R$ 12,50 por ticket,
+              equivalente a <strong>R$ 12.548,44/mês</strong> de HH antes da automação.
+            </div>
+</div>
+<div class="fin29-card">
+<div class="fin29-title">
+<span>Ponto de equilíbrio</span>
+<h3>Break-even da automação</h3>
+</div>
+<div class="be-chart-v29">
+<div class="be-row-v29">
+<div class="be-label-v29">
+<span>R$ 10/ticket</span>
+<strong>10,3%</strong>
+</div>
+<div class="be-track-v29"><i style="width:100.0%"></i></div>
+</div>
+<div class="be-row-v29">
+<div class="be-label-v29">
+<span>R$ 12,50/ticket</span>
+<strong>8,3%</strong>
+</div>
+<div class="be-track-v29"><i style="width:80.0%"></i></div>
+</div>
+<div class="be-row-v29">
+<div class="be-label-v29">
+<span>R$ 15/ticket</span>
+<strong>6,9%</strong>
+</div>
+<div class="be-track-v29"><i style="width:66.7%"></i></div>
+</div>
+</div>
+<div class="break-even-highlight-v29">
+<strong>8,3%</strong>
+<span>resolução autônoma necessária no cenário de R$ 12,50 por ticket</span>
+</div>
+</div>
+<div class="fin29-card full">
+<div class="fin29-title">
+<span>HH + automação</span>
+<h3>O custo total diminui conforme aumenta a resolução autônoma</h3>
+</div>
+<div class="cost-comparison-chart-v30">
+<div class="cost-column-v30 current">
+<strong>R$ 12,5 mil/mês</strong>
+<div class="cost-column-shell-v30">
+<i style="height:100.0%"></i>
+</div>
+<span>Atual</span>
+<small>HH atual</small>
+</div>
+<div class="cost-column-v30 amber">
+<strong>R$ 11,1 mil/mês</strong>
+<div class="cost-column-shell-v30">
+<i style="height:88.3%"></i>
+</div>
+<span>20% autônomo</span>
+<small>R$ 17,7 mil/ano de economia</small>
+</div>
+<div class="cost-column-v30 purple">
+<strong>R$ 8,6 mil/mês</strong>
+<div class="cost-column-shell-v30">
+<i style="height:68.3%"></i>
+</div>
+<span>40% autônomo</span>
+<small>R$ 47,8 mil/ano de economia</small>
+</div>
+<div class="cost-column-v30 green">
+<strong>R$ 6,1 mil/mês</strong>
+<div class="cost-column-shell-v30">
+<i style="height:48.3%"></i>
+</div>
+<span>60% autônomo</span>
+<small>R$ 77,9 mil/ano de economia</small>
+</div>
+</div>
+<div class="scenario-formula-v29">
+<strong>Como o custo é calculado</strong>
+<span>
+                Custo pós-automação = HH remanescente + <b>R$ 1.036,79/mês</b> de automação.
+                O HH remanescente é calculado aplicando a taxa de resolução autônoma sobre o volume mensal de tickets.
+              </span>
+</div>
+<div class="scenario-disclaimer-v29">Os percentuais de 20%, 40% e 60% são cenários de sensibilidade. A taxa efetiva de resolução autônoma deverá ser medida durante o piloto.</div>
 </div>
 </div>
 </div>
@@ -5710,7 +7180,6 @@ body.bc-focus .section-launch.focus-panel .section-header{
 <div>
 <span class="agent-eyebrow">Lógica operacional</span>
 <h3>O agente atua como uma camada de triagem, resolução controlada e encaminhamento</h3>
-
 </div>
 </div>
 <div class="agent-flow-card">
@@ -5935,110 +7404,133 @@ body.bc-focus .section-launch.focus-panel .section-header{
 <div class="arrow">⌄</div>
 </div>
 <div class="section-content"><button class="focus-back" type="button">← Voltar para as seções</button>
-<div class="payback-v27">
-<div class="payback-hero-v27">
+<div class="payback-v37">
+<div class="payback-hero-v37">
 <div>
-<span class="pb27-eyebrow">Payback estimado</span>
-<h3>Retorno estimado considerando redução de churn de 1 p.p.</h3>
+<span class="pb37-eyebrow">Payback estimado</span>
+<h3>Dois cenários de retorno</h3>
 <p>
-            Considera-se uma redução de <strong>1 p.p. no churn</strong> entre os
-            <strong>382 clientes</strong> que acionaram o Atendimento.
-            Isso equivale a aproximadamente <strong>3,82 clientes adicionais retidos</strong>
-            e a <strong>R$ 18,3 mil de LTV potencialmente protegido</strong>.
+            O primeiro isola o <strong>custo anual da automação</strong>.
+            O segundo considera o <strong>custo estimado de 1 ano com HH remanescente + IA</strong>
+            no cenário de 40% de resolução autônoma.
           </p>
 </div>
-<div class="payback-main-v27">
-<strong>8,2 meses</strong>
-<span>payback estimado no cenário de redução de 1 p.p. no churn</span>
 </div>
+<div class="dual-payback-grid-v37">
+<div class="dual-payback-card-v37 automation">
+<div class="dual-pb-head-v37">
+<span>Cenário 1</span>
+<h3>Payback do custo de automação</h3>
 </div>
-<div class="payback-kpis-v27">
-<div class="pb27-kpi blue">
-<span>Clientes com Atendimento</span>
-<strong>382</strong>
-<small>base usada para a análise</small>
-</div>
-<div class="pb27-kpi purple">
-<span>LTV mediano</span>
-<strong>R$ 4.784,45</strong>
-<small>clientes que acionaram Atendimento</small>
-</div>
-<div class="pb27-kpi green">
-<span>LTV protegido no cenário-base</span>
-<strong>R$ 18,3 mil</strong>
-<small>equivalente a 3,82 clientes adicionais retidos</small>
-</div>
-<div class="pb27-kpi amber">
-<span>Custo recorrente anual</span>
+<div class="dual-pb-highlight-v37">
+<div>
+<span>Custo anual considerado</span>
 <strong>R$ 12,4 mil</strong>
-<small>com reserva de canais</small>
 </div>
-</div>
-<div class="payback-grid-v27">
-<div class="payback-cross-card-v27">
-<div class="pb27-title">
-<span>Cenário-base · redução de 1,0 p.p. no churn</span>
-<h3>O LTV protegido acumulado cobre o custo recorrente anual por volta do mês 8</h3>
-</div>
-<div class="pb-cross-visual-v27">
-<div class="pb-cross-y-v27">
-<span>R$ 20 mil</span>
-<span>R$ 15 mil</span>
-<span>R$ 10 mil</span>
-<span>R$ 5 mil</span>
-<span>R$ 0</span>
-</div>
-<div class="pb-cross-plot-v27">
-<svg aria-label="LTV protegido acumulado versus custo recorrente anual" height="100%" preserveaspectratio="none" viewbox="0 0 600 190" width="100%">
-<line stroke="#2F7C50" stroke-width="4" x1="0" x2="600" y1="190" y2="0"></line>
-<line stroke="#9B14C4" stroke-dasharray="7 5" stroke-width="3" x1="0" x2="600" y1="71.8" y2="71.8"></line>
-<circle cx="408.5" cy="71.8" fill="#2F7C50" r="7" stroke="#fff" stroke-width="3"></circle>
-</svg>
-<div class="pb-cross-label cost">Custo anual: R$ 12,4 mil</div>
-<div class="pb-cross-label point">8,2 meses</div>
-<div class="pb-cross-x-v27">
-<span>0</span><span>3</span><span>6</span><span>9</span><span>12 meses</span>
-</div>
-</div>
-</div>
-<div class="pb-cross-legend-v27">
-<span><i class="ltv"></i> LTV protegido acumulado</span>
-<span><i class="cost"></i> custo recorrente anual</span>
-</div>
-</div>
-<div class="payback-scenarios-card-v27">
-<div class="pb27-title">
-<span>Faixa de retorno</span>
-<h3>O payback varia conforme a redução assumida no churn</h3>
-</div>
-<div class="payback-bars-v27">
-<div class="pbbar-v27 amber">
-<strong>16,3 meses</strong>
-<div class="pbbar-shell-v27"><i style="height:100.0%"></i></div>
-<span>Redução de 0,5 p.p.</span>
-<small>R$ 9,1 mil de LTV protegido/ano</small>
-</div>
-<div class="pbbar-v27 purple">
+<div>
+<span>Cenário-base · churn −1 p.p.</span>
 <strong>8,2 meses</strong>
-<div class="pbbar-shell-v27"><i style="height:50.0%"></i></div>
-<span>Redução de 1,0 p.p.</span>
-<small>R$ 18,3 mil de LTV protegido/ano</small>
 </div>
-<div class="pbbar-v27 green">
+</div><div class="scenario1-metrics-v40">
+<div class="churn05">
+<span>LTV protegido · churn −0,5 p.p.</span>
+<strong>R$ 762/mês</strong>
+<small>R$ 9,1 mil/ano</small>
+</div>
+<div class="churn10">
+<span>LTV protegido · churn −1,0 p.p.</span>
+<strong>R$ 1,5 mil/mês</strong>
+<small>R$ 18,3 mil/ano</small>
+</div>
+<div class="churn20">
+<span>LTV protegido · churn −2,0 p.p.</span>
+<strong>R$ 3,0 mil/mês</strong>
+<small>R$ 36,6 mil/ano</small>
+</div>
+</div>
+<div class="dual-pb-bars-v37">
+<div class="dual-pb-bar-v37 amber">
+<strong>16,3 meses</strong>
+<div class="dual-pb-shell-v37"><i style="height:100.0%"></i></div>
+<span>Churn −0,5 p.p.</span>
+<small>R$ 9,1 mil/ano de LTV</small>
+</div>
+<div class="dual-pb-bar-v37 purple">
+<strong>8,2 meses</strong>
+<div class="dual-pb-shell-v37"><i style="height:50.0%"></i></div>
+<span>Churn −1,0 p.p.</span>
+<small>R$ 18,3 mil/ano de LTV</small>
+</div>
+<div class="dual-pb-bar-v37 green">
 <strong>4,1 meses</strong>
-<div class="pbbar-shell-v27"><i style="height:25.0%"></i></div>
-<span>Redução de 2,0 p.p.</span>
-<small>R$ 36,6 mil de LTV protegido/ano</small>
+<div class="dual-pb-shell-v37"><i style="height:25.0%"></i></div>
+<span>Churn −2,0 p.p.</span>
+<small>R$ 36,6 mil/ano de LTV</small>
 </div>
 </div>
-<div class="pb27-premise">
-<strong>Premissa do cálculo</strong>
+<div class="dual-pb-note-v37">Neste cenário, o payback compara apenas o custo anual da automação com o LTV potencialmente protegido em cada cenário de churn.</div>
+</div>
+<div class="dual-payback-card-v37 full">
+<div class="dual-pb-head-v37">
+<span>Cenário 2</span>
+<h3>Payback do custo de 1 ano com HH + IA</h3>
+</div>
+<div class="dual-pb-highlight-v37">
+<div>
+<span>Custo anual considerado</span>
+<strong>R$ 102,8 mil</strong>
+</div>
+<div>
+<span>Cenário-base · churn −1 p.p.</span>
+<strong>18,7 meses</strong>
+</div>
+</div><div class="scenario2-metrics-v38">
+<div>
+<span>Economia operacional · 40% autônomo</span>
+<strong>R$ 4,0 mil/mês</strong>
+</div>
+<div>
+<span>LTV protegido · churn −1 p.p.</span>
+<strong>R$ 1,5 mil/mês</strong>
+<small>R$ 18,3 mil/ano</small>
+</div>
+<div>
+<span>Benefício combinado</span>
+<strong>R$ 5,5 mil/mês</strong>
+</div>
+</div>
+<div class="dual-pb-bars-v37">
+<div class="dual-pb-bar-v37 amber">
+<strong>21,7 meses</strong>
+<div class="dual-pb-shell-v37"><i style="height:100.0%"></i></div>
+<span>Churn −0,5 p.p.</span>
+<small>R$ 4,7 mil/mês de benefício</small>
+</div>
+<div class="dual-pb-bar-v37 purple">
+<strong>18,7 meses</strong>
+<div class="dual-pb-shell-v37"><i style="height:86.2%"></i></div>
+<span>Churn −1,0 p.p.</span>
+<small>R$ 5,5 mil/mês de benefício</small>
+</div>
+<div class="dual-pb-bar-v37 green">
+<strong>14,6 meses</strong>
+<div class="dual-pb-shell-v37"><i style="height:67.5%"></i></div>
+<span>Churn −2,0 p.p.</span>
+<small>R$ 7,0 mil/mês de benefício</small>
+</div>
+</div>
+<div class="dual-pb-note-v37">
+            Aqui o retorno considera a economia operacional do cenário de 40% autônomo somada ao LTV potencialmente protegido.
+          </div>
+</div>
+</div>
+<div class="payback-premise-v37">
+<strong>Premissas</strong>
 <span>
-              O payback compara o custo recorrente anual da solução com o LTV protegido
-              no cenário de retenção considerado.
-            </span>
-</div>
-</div>
+          Cenário 1: custo anual da automação ÷ LTV protegido mensal.
+          Cenário 2: custo anual de HH remanescente + IA ÷
+          (economia operacional líquida mensal + LTV protegido mensal).
+        </span>
 </div>
 </div>
 </div>

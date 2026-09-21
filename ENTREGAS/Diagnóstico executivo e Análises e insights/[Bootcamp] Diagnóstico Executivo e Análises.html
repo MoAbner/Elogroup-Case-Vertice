@@ -1107,6 +1107,284 @@
   color:#303540;
   letter-spacing:-0.1px;
 }
+</style><style>
+/* ===== V24 · OPORTUNIDADE DE ATENDIMENTO ALINHADA AO BUSINESS CASE ===== */
+.att-model-grid-v24{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:9px;
+}
+.att-model-grid-v24>div{
+  padding:13px;
+  border-radius:12px;
+  border:1px solid #E5E8EF;
+  background:#FAFBFD;
+}
+.att-model-grid-v24>div.highlight{
+  background:#F6ECFA;
+  border-color:#E3CFEA;
+}
+.att-model-grid-v24 small,
+.att-impact-grid-v24 small{
+  display:block;
+  font-size:8px;
+  text-transform:uppercase;
+  letter-spacing:.45px;
+  color:#7B818D;
+  font-weight:850;
+}
+.att-model-grid-v24 strong,
+.att-impact-grid-v24 strong{
+  display:block;
+  margin-top:6px;
+  font-size:17px;
+  color:#2E3340;
+}
+.att-model-grid-v24 span,
+.att-impact-grid-v24 span{
+  display:block;
+  margin-top:4px;
+  font-size:8px;
+  color:#737986;
+}
+
+.att-scenarios-v24{
+  display:flex;
+  flex-direction:column;
+  gap:13px;
+}
+.att-scenario-head-v24{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+}
+.att-scenario-head-v24 span{
+  font-size:9px;
+  font-weight:800;
+  color:#59606D;
+}
+.att-scenario-head-v24 strong{
+  font-size:11px;
+  color:#252A35;
+}
+.att-track-v24{
+  height:10px;
+  margin-top:5px;
+  border-radius:999px;
+  background:#EBEDF2;
+  overflow:hidden;
+}
+.att-track-v24 i{
+  display:block;
+  height:100%;
+  border-radius:999px;
+}
+.att-scenario-v24.s20 .att-track-v24 i{background:linear-gradient(90deg,#E3B64E,#F0CC72)}
+.att-scenario-v24.s40 .att-track-v24 i{background:linear-gradient(90deg,#8E35B3,#C35CDB)}
+.att-scenario-v24.s60 .att-track-v24 i{background:linear-gradient(90deg,#2F7C50,#69AA82)}
+.att-scenario-v24 small{
+  display:block;
+  margin-top:4px;
+  font-size:8px;
+  color:#838995;
+}
+.att-scenario-note-v24,
+.att-impact-note-v24{
+  margin-top:11px;
+  font-size:8.5px;
+  color:#858B97;
+  line-height:1.45;
+}
+
+.att-impact-grid-v24{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+.att-impact-grid-v24>div{
+  padding:15px;
+  border-radius:12px;
+  border:1px solid;
+}
+.att-impact-grid-v24 .margin{
+  background:#EEF8F3;
+  border-color:#CFE5D8;
+}
+.att-impact-grid-v24 .revenue{
+  background:#EEF3FF;
+  border-color:#D3DCFA;
+}
+.att-impact-grid-v24 .margin strong{color:#2F7C50}
+.att-impact-grid-v24 .revenue strong{color:#3947F3}
+
+@media(max-width:900px){
+  .att-model-grid-v24,
+  .att-impact-grid-v24{
+    grid-template-columns:1fr;
+  }
+}
+</style><style>
+/* ===== V25 · CORREÇÃO DE FORMATAÇÃO DAS OPORTUNIDADES ===== */
+
+/* evita corte de conteúdo nos cards */
+.opp-v2 .vp-card{
+  min-width:0!important;
+  overflow:visible!important;
+}
+.opp-v2 .chart-box,
+.opp-v2 .vp-kpi,
+.att-model-grid-v24>div,
+.att-impact-grid-v24>div{
+  min-width:0!important;
+  overflow:visible!important;
+}
+
+/* Atendimento: os valores passam a ter largura suficiente */
+.att-model-grid-v24{
+  grid-template-columns:1fr!important;
+}
+.att-impact-grid-v24{
+  grid-template-columns:1fr 1fr!important;
+}
+.att-model-grid-v24 strong,
+.att-impact-grid-v24 strong,
+.opp-v2 .metric-value-clean{
+  white-space:normal!important;
+  overflow-wrap:anywhere!important;
+  word-break:normal!important;
+}
+
+/* garante que títulos e valores não extrapolem os cards */
+.opp-v2 .vp-main,
+.opp-v2 .vp-unit,
+.opp-v2 .vp-kpi strong,
+.opp-v2 .hbar-value,
+.opp-v2 .compare-item strong,
+.opp-v2 .compare-item p{
+  max-width:100%!important;
+  overflow-wrap:anywhere!important;
+}
+
+/* em telas menores, reduz a grade principal antes que os cards fiquem espremidos */
+@media(max-width:1120px){
+  .opp-v2 .vp-grid{
+    grid-template-columns:1fr 1fr!important;
+  }
+  .opp-v2 .vp-card.atendimento{
+    grid-column:1 / -1!important;
+  }
+}
+@media(max-width:760px){
+  .opp-v2 .vp-grid{
+    grid-template-columns:1fr!important;
+  }
+  .opp-v2 .vp-card.atendimento{
+    grid-column:auto!important;
+  }
+  .att-impact-grid-v24{
+    grid-template-columns:1fr!important;
+  }
+}
+</style><style>
+/* ===== V26 · ORDEM DO ATENDIMENTO + LEITURA ECONÔMICA DE RUPTURA ===== */
+
+/* Atendimento: separação visual dos dois indicadores operacionais do restante */
+.opp-v2 .atendimento-v24 > .chart-box:nth-of-type(1),
+.opp-v2 .atendimento-v24 > .chart-box:nth-of-type(2){
+  background:#fff!important;
+}
+
+.opp-v2 .atendimento-v24 > .vp-kpis{
+  margin-top:18px!important;
+}
+
+/* Leitura econômica de Ruptura */
+.rupture-reading-v26{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  width:100%;
+  min-width:0;
+  margin-top:4px;
+}
+
+.rupture-reading-card-v26{
+  width:100%;
+  min-width:0;
+  padding:14px 15px;
+  border-radius:12px;
+  box-sizing:border-box;
+}
+
+.rupture-reading-card-v26.base{
+  background:#FFF8E6;
+  border:1px solid #F3CF75;
+}
+
+.rupture-reading-card-v26.scenario{
+  background:#FFFFFF;
+  border:1px solid #E3E6EE;
+}
+
+.rupture-reading-card-v26 span{
+  display:block;
+  font-size:8px;
+  text-transform:uppercase;
+  letter-spacing:.5px;
+  font-weight:850;
+}
+
+.rupture-reading-card-v26.base span{color:#8A6A19}
+.rupture-reading-card-v26.scenario span{color:#858B98}
+
+.rupture-reading-card-v26 strong{
+  display:block;
+  margin-top:4px;
+  font-size:19px;
+  line-height:1.1;
+  font-weight:900;
+  color:#242833;
+  white-space:normal;
+  overflow-wrap:anywhere;
+}
+
+.rupture-reading-card-v26.base strong{color:#4B3A0A}
+
+.rupture-reading-card-v26 p{
+  margin:5px 0 0;
+  font-size:9px;
+  line-height:1.4;
+  overflow-wrap:anywhere;
+}
+
+.rupture-reading-card-v26.base p{color:#75642F}
+.rupture-reading-card-v26.scenario p{color:#6C7280}
+
+.rupture-arrow-v26{
+  width:100%;
+  text-align:center;
+  font-size:19px;
+  line-height:1;
+  color:#B48300;
+  font-weight:900;
+  padding:1px 0;
+}
+
+/* Mantém o conteúdo dentro da largura dos cards */
+.opp-v2 .ruptura .chart-box{
+  min-width:0!important;
+  overflow:visible!important;
+}
+</style><style>
+/* ===== V27 · RESTAURA ORDEM ORIGINAL DO ATENDIMENTO ===== */
+.opp-v2 .atendimento-v24 > .chart-box:nth-of-type(1),
+.opp-v2 .atendimento-v24 > .chart-box:nth-of-type(2){
+  background:#fafbfe!important;
+}
+.opp-v2 .atendimento-v24 > .vp-kpis{
+  margin-top:20px!important;
+}
 </style></head>
 <body>
 <button class="print" onclick="window.print()"><i class="fa-solid fa-print"></i> Imprimir / PDF</button>
@@ -1619,21 +1897,94 @@
           O value pool está na <strong>realocação para canais que combinam retorno e margem superiores</strong>. Os dados mostram um spread claro de eficiência, mas ainda não isolam quanto dessa diferença seria efetivamente capturada após uma mudança de orçamento.
         </div>
 </article>
-<article class="vp-card atendimento">
+<article class="vp-card atendimento atendimento-v24">
 <div class="vp-title">Atendimento</div>
-<div class="vp-main">24.093 tickets</div>
-<div class="vp-unit">base completa de Atendimento considerada no desenho da solução</div>
-<div class="vp-kpis">
+<div class="vp-main">R$ 47,8 mil/ano</div>
+<div class="vp-unit">
+    economia líquida no cenário central de 40% de resolução autônoma
+  </div><div class="vp-kpis">
 <div class="vp-kpi">
-<small>Custo operacional observado</small>
-<strong>R$ 358,7 mil</strong>
+<small>Volume observado</small>
+<strong>24.093 tickets</strong>
 </div>
 <div class="vp-kpi">
-<small>Custo médio por ticket</small>
-<strong>R$ 14,89</strong>
+<small>Média mensal</small>
+<strong>1.003,875 tickets</strong>
+</div>
+</div><div class="chart-box">
+<div class="chart-title">Modelo econômico de referência</div>
+<div class="att-model-grid-v24">
+<div>
+<small>HH atual</small>
+<strong>R$ 12.548,44/mês</strong>
+<span>R$ 12,50 por ticket</span>
+</div>
+<div>
+<small>Automação</small>
+<strong>R$ 1.036,79/mês</strong>
+<span>custo recorrente considerado</span>
+</div>
+<div class="highlight">
+<small>Ponto de equilíbrio</small>
+<strong>8,3%</strong>
+<span>resolução autônoma necessária</span>
 </div>
 </div>
-<div class="chart-box">
+</div><div class="chart-box">
+<div class="chart-title">Economia operacional por cenário</div>
+<div class="att-scenarios-v24">
+<div class="att-scenario-v24 s20">
+<div class="att-scenario-head-v24">
+<span>20% autônomo</span>
+<strong>R$ 17,7 mil/ano</strong>
+</div>
+<div class="att-track-v24">
+<i style="width:22.7%"></i>
+</div>
+<small>Custo pós-automação: R$ 11,1 mil/mês</small>
+</div>
+<div class="att-scenario-v24 s40">
+<div class="att-scenario-head-v24">
+<span>40% autônomo</span>
+<strong>R$ 47,8 mil/ano</strong>
+</div>
+<div class="att-track-v24">
+<i style="width:61.3%"></i>
+</div>
+<small>Custo pós-automação: R$ 8,6 mil/mês</small>
+</div>
+<div class="att-scenario-v24 s60">
+<div class="att-scenario-head-v24">
+<span>60% autônomo</span>
+<strong>R$ 77,9 mil/ano</strong>
+</div>
+<div class="att-track-v24">
+<i style="width:100%"></i>
+</div>
+<small>Custo pós-automação: R$ 6,1 mil/mês</small>
+</div>
+</div>
+<div class="att-scenario-note-v24">
+      Os percentuais de 20%, 40% e 60% são cenários de sensibilidade. A taxa efetiva de resolução autônoma deverá ser validada no piloto.
+    </div>
+</div><div class="chart-box">
+<div class="chart-title">Impacto econômico no cenário de 40%</div>
+<div class="att-impact-grid-v24">
+<div class="margin">
+<small>Margem de contribuição</small>
+<strong>0,56%</strong>
+<span>equivalente à economia líquida anual</span>
+</div>
+<div class="revenue">
+<small>Receita líquida</small>
+<strong>+0,31 p.p.</strong>
+<span>impacto equivalente sobre a receita</span>
+</div>
+</div>
+<div class="att-impact-note-v24">
+      Referências anualizadas: margem de contribuição de aproximadamente R$ 8,49 milhões e receita líquida de aproximadamente R$ 15,63 milhões.
+    </div>
+</div><div class="chart-box">
 <div class="chart-title">Primeira resposta: atual × meta</div>
 <div style="display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:center;">
 <div style="background:#f7f8fb;border:1px solid #eceef4;border-radius:12px;padding:16px;text-align:center;">
@@ -1649,10 +2000,9 @@
 </div>
 </div>
 <div style="margin-top:13px;text-align:center;font-size:12px;font-weight:800;color:#7a0fa0;">
-              redução projetada de 81,8% no tempo de primeira resposta
-            </div>
-</div>
-<div class="chart-box">
+      redução projetada de 81,8% no tempo de primeira resposta
+    </div>
+</div><div class="chart-box">
 <div class="chart-title">MTTR mediano: atual × estimativa pós-implantação</div>
 <div style="display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:center;">
 <div style="background:#f7f8fb;border:1px solid #eceef4;border-radius:12px;padding:16px;text-align:center;">
@@ -1668,76 +2018,16 @@
 </div>
 </div>
 <div style="margin-top:13px;text-align:center;font-size:12px;font-weight:800;color:#2f7c50;">
-              redução estimada de 87,8% no MTTR mediano
-            </div>
-</div>
-<div class="chart-box">
-<div class="chart-title">Potencial econômico na base completa de Atendimento</div>
-<div class="metric-grid-clean">
-<div class="metric-clean row-1">
-<div class="metric-label-clean">Custo observado</div>
-<div class="metric-value-clean">R$ 358,7 mil</div>
-</div>
-<div class="metric-clean row-1">
-<div class="metric-label-clean">Custo recorrente em 24 meses</div>
-<div class="metric-value-clean">R$ 24,9 mil</div>
-</div>
-<div class="metric-clean highlight" style="grid-column:1 / -1;">
-<div class="metric-label-clean">Redução líquida potencial</div>
-<div class="metric-value-clean">R$ 333,8 mil</div>
-</div>
-</div>
-<div style="margin-top:11px;font-size:9px;color:#8a8f9b;line-height:1.45;">
-              Para manter a comparação no mesmo horizonte da base completa de 2023 e 2024,
-              o custo recorrente anual de <strong>R$ 12.441,44</strong> foi projetado por 24 meses,
-              resultando em aproximadamente <strong>R$ 24,9 mil</strong>.
-              O cenário segue a mesma premissa do Business Case: a nova solução reduz o custo operacional
-              modelado do Atendimento ao custo recorrente da solução.
-            </div>
-</div>
-<div class="chart-box">
-<div class="chart-title">Impacto no período comum entre Atendimento e Vendas</div>
-<div style="margin:-3px 0 13px;font-size:10px;color:#717784;font-weight:700;">01/01/2023 a 26/01/2024</div>
-<div class="metric-grid-clean">
-<div class="metric-clean row-1">
-<div class="metric-label-clean">Custo atual</div>
-<div class="metric-value-clean">R$ 188,7 mil</div>
-</div>
-<div class="metric-clean row-1">
-<div class="metric-label-clean">Custo estimado da solução</div>
-<div class="metric-value-clean">R$ 13,3 mil</div>
-</div>
-<div class="metric-clean highlight">
-<div class="metric-label-clean">Redução líquida potencial</div>
-<div class="metric-value-clean">R$ 175,4 mil</div>
-</div>
-<div class="metric-clean row-2">
-<div class="metric-label-clean">Redução do custo modelado</div>
-<div class="metric-value-clean">93,0%</div>
-</div>
-</div>
-<div class="equiv-grid-clean">
-<div class="equiv-clean">
-<div class="metric-value-clean"><strong>1,94%</strong></div>
-<div style="font-size:10px;color:#6f7582;margin-top:5px;line-height:1.35;">equivalente à margem de contribuição observada no período</div>
-</div>
-<div class="equiv-clean">
-<div class="metric-value-clean"><strong>+1,05 p.p.</strong></div>
-<div style="font-size:10px;color:#6f7582;margin-top:5px;line-height:1.35;">equivalente sobre a receita líquida observada no período</div>
-</div>
-</div>
-<div style="margin-top:11px;font-size:9px;color:#8a8f9b;line-height:1.45;">
-              No período comum, o Atendimento registra R$ 188,7 mil de custo operacional.
-              Para o mesmo horizonte, o custo recorrente estimado da solução é de R$ 13,3 mil,
-              resultando em R$ 175,4 mil de redução líquida potencial.
-              A receita líquida observada no período é de R$ 16,67 milhões e a margem de contribuição é de R$ 9,06 milhões.
-            </div>
+      redução estimada de 87,8% no MTTR mediano
+    </div>
 </div>
 <div class="vp-caption">
-            O value pool de Atendimento passa a considerar <strong>toda a operação</strong>, e não somente categorias selecionadas.
-            O potencial combina redução de custo, menor tempo de primeira resposta e redução esperada do MTTR,
-            mantendo o atendimento humano para os casos que exigem análise, exceção ou julgamento.
-          </div>
+    O value pool de Atendimento passa a ser dimensionado pelo modelo de
+    <strong>HH remanescente + automação</strong>.
+    No cenário central de 40% de resolução autônoma, a economia líquida estimada é de
+    <strong>R$ 47,8 mil/ano</strong>,
+    sem assumir a substituição integral do custo histórico de Atendimento.
+  </div>
 </article>
 <article class="vp-card ruptura">
 <div class="vp-title">Ruptura</div>
@@ -1757,107 +2047,43 @@
 <div class="chart-title">Cenários de captura sobre a margem historicamente exposta</div>
 <div class="hbar-row">
 <div class="hbar-label">10% recuperável</div>
-<div class="hbar-track"><div class="hbar-fill" style="width:40%"></div></div>
+<div class="hbar-track"><div class="hbar-fill" style="width:50%"></div></div>
 <div class="hbar-value">R$ 18,9 mil</div>
 </div>
 <div class="hbar-row">
 <div class="hbar-label">15% recuperável</div>
-<div class="hbar-track"><div class="hbar-fill" style="width:60%"></div></div>
+<div class="hbar-track"><div class="hbar-fill" style="width:75%"></div></div>
 <div class="hbar-value">R$ 28,4 mil</div>
 </div>
 <div class="hbar-row">
-<div class="hbar-label">25% recuperável</div>
+<div class="hbar-label">20% recuperável</div>
 <div class="hbar-track"><div class="hbar-fill" style="width:100%"></div></div>
-<div class="hbar-value">R$ 47,3 mil</div>
+<div class="hbar-value">R$ 37,8 mil</div>
 </div>
 </div>
 <div class="chart-box">
 <div class="chart-title">Leitura econômica do value pool</div>
-<div style="display:flex;flex-direction:column;gap:10px;margin-top:6px;">
-<div style="
-      width:100%;
-      background:#fff8e6;
-      border:1px solid #f3cf75;
-      border-radius:12px;
-      padding:15px 16px;
-      box-sizing:border-box;
-    ">
-<div style="
-        font-size:9px;
-        text-transform:uppercase;
-        letter-spacing:.55px;
-        color:#8a6a19;
-        font-weight:800;
-      ">
-        Base observada
-      </div>
-<div style="
-        font-size:20px;
-        font-weight:900;
-        color:#4b3a0a;
-        margin-top:4px;
-        white-space:nowrap;
-      ">
-        R$ 189,1 mil
-      </div>
-<div style="
-        font-size:10px;
-        color:#75642f;
-        margin-top:5px;
-        line-height:1.4;
-      ">
-        margem historicamente gerada pelos SKUs atualmente em ruptura
-      </div>
+<div class="rupture-reading-v26">
+<div class="rupture-reading-card-v26 base">
+<span>Base observada</span>
+<strong>R$ 189,1 mil</strong>
+<p>margem historicamente gerada pelos 99 SKUs atualmente em ruptura</p>
 </div>
-<div style="
-      width:100%;
-      text-align:center;
-      font-size:22px;
-      line-height:1;
-      color:#b48300;
-      font-weight:900;
-      padding:1px 0;
-    ">
-      ↓
-    </div>
-<div style="
-      width:100%;
-      background:#ffffff;
-      border:1px solid #e3e6ee;
-      border-radius:12px;
-      padding:15px 16px;
-      box-sizing:border-box;
-    ">
-<div style="
-        font-size:9px;
-        text-transform:uppercase;
-        letter-spacing:.55px;
-        color:#858b98;
-        font-weight:800;
-      ">
-        Cenário de 25%
-      </div>
-<div style="
-        font-size:20px;
-        font-weight:900;
-        color:#242833;
-        margin-top:4px;
-        white-space:nowrap;
-      ">
-        R$ 47,3 mil
-      </div>
-<div style="
-        font-size:10px;
-        color:#6c7280;
-        margin-top:5px;
-        line-height:1.4;
-      ">
-        margem potencialmente protegida se 25% da exposição puder ser recuperada
-      </div>
+<div class="rupture-arrow-v26">↓</div>
+<div class="rupture-reading-card-v26 scenario">
+<span>Cenário de 20%</span>
+<strong>R$ 37,8 mil</strong>
+<p>margem potencialmente protegida se 20% da exposição puder ser recuperada</p>
 </div>
 </div>
 </div>
-<div class="vp-caption">O value pool de Ruptura é apresentado como <strong>cenário de margem protegida</strong>. Os R$ 189,1 mil são a referência econômica observada e os cenários mostram quanto dessa exposição poderia ser capturada se a disponibilidade de estoque evitasse parte da perda de conversão. Os cenários de 10%, 15% e 25% representam, respectivamente, R$ 18,9 mil, R$ 28,4 mil e R$ 47,3 mil de margem potencialmente protegida.</div>
+<div class="vp-caption">
+        O value pool de Ruptura é apresentado como <strong>cenário de margem protegida</strong>.
+        Os R$ 189,1 mil são a referência econômica observada e os cenários mostram quanto dessa
+        exposição poderia ser capturada se a disponibilidade de estoque evitasse parte da perda de conversão.
+        Os cenários de 10%, 15% e 20% representam, respectivamente,
+        R$ 18,9 mil, R$ 28,4 mil e R$ 37,8 mil de margem potencialmente protegida.
+        </div>
 </article>
 </div>
 <div class="compare-card">
@@ -1873,13 +2099,13 @@
 </div>
 <div class="compare-item highlight">
 <small>Atendimento</small>
-<strong>R$ 175,4 mil de redução líquida potencial no período comparável</strong>
-<p>De 01/01/2023 a 26/01/2024, o Atendimento registra R$ 188,7 mil de custo operacional. No mesmo horizonte, a solução é estimada em R$ 13,3 mil, com redução líquida potencial de R$ 175,4 mil. A primeira resposta passa de 11 min para até 2 min, e o ganho equivale a 1,94% da margem de contribuição observada.</p>
+<strong>R$ 47,8 mil/ano de economia líquida no cenário de 40%</strong>
+<p>Com 1.003,875 tickets por mês, HH de R$ 12,50 por ticket e R$ 1.036,79 por mês de automação, o cenário central de 40% de resolução autônoma reduz o custo mensal de R$ 12,5 mil para R$ 8,6 mil. A economia anual de R$ 47,8 mil equivale a 0,56% da margem de contribuição e a +0,31 p.p. da receita líquida anualizada.</p>
 </div>
 <div class="compare-item">
 <small>Ruptura</small>
-<strong>R$ 47,3 mil no cenário de 25%</strong>
-<p>Com R$ 189,1 mil de margem historicamente exposta, o cenário de 25% representa R$ 47,3 mil de margem potencialmente protegida.</p>
+<strong>R$ 37,8 mil no cenário de 20%</strong>
+<p>Com R$ 189,1 mil de margem historicamente exposta, o cenário de 20% representa R$ 37,8 mil de margem potencialmente protegida.</p>
 </div>
 </div>
 </div>
