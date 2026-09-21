@@ -22,6 +22,12 @@ class PrototypeTest(unittest.TestCase):
         self.assertEqual(blocked["status"], "waiting_human")
         self.assertNotIn("Em transporte", blocked["messages"][-1]["text"])
 
+    def test_order_code_continues_status_conversation(self):
+        item = service.create("cliente-ana", "Canal Vértice", "Quero saber onde está meu pedido")
+        followed = service.client_message("cliente-ana", item["id"], "VERT-1001")
+        self.assertEqual(followed["route"], "CHATBOT")
+        self.assertIn("Em transporte", followed["messages"][-1]["text"])
+
     def test_fraud_is_p0_and_specialized(self):
         item = service.create("cliente-ana", "WhatsApp", "Tem uma cobrança que não reconheço")
         self.assertEqual((item["priority"], item["team"], item["route"]), ("P0", "Financeiro", "HUMANO_ESPECIALIZADO"))

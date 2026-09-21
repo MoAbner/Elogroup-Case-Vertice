@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MTTR estimado | Vértice Care</title>
+<style>
+@page{size:A4;margin:14mm}
+:root{--ink:#24202d;--muted:#696371;--purple:#4b1d8f;--violet:#6731bd;--soft:#f5f2f9;--mint:#e8f5f2;--green:#007f6d;--amber:#fff4df;--red:#a51f35;--line:#ddd9e5}
+*{box-sizing:border-box}body{margin:0;background:#eeedf2;color:var(--ink);font:14px/1.5 Aptos,"Segoe UI",Arial,sans-serif}.page{width:min(1050px,calc(100% - 32px));margin:24px auto;background:#fff;padding:38px 44px;box-shadow:0 3px 16px #21143815;border-top:5px solid var(--purple)}header{display:flex;justify-content:space-between;gap:24px;border-bottom:1px solid var(--line);padding-bottom:17px;margin-bottom:24px}.eyebrow{color:var(--purple);font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;margin:0 0 8px}.brand{font-size:14px;font-weight:700;letter-spacing:.08em;color:#777}.brand span{color:var(--purple)}h1{font:700 34px/1.08 Cambria,Georgia,serif;color:#32136b;margin:0;max-width:760px}h2{font-size:19px;color:#38146f;margin:25px 0 8px}.lead{font-size:18px;color:#4e4958;max-width:900px}.hero-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:22px 0}.hero{padding:17px 18px;border-radius:3px;background:var(--purple);color:#fff}.hero.pale{background:#ede7f6;color:#32136b}.hero.mint{background:var(--mint);color:#14584e}.hero span{font-size:11px;text-transform:uppercase;letter-spacing:.08em;font-weight:700}.hero strong{display:block;font:700 27px/1.1 Cambria,Georgia,serif;margin-top:8px}.hero p{margin:6px 0 0}.callout{padding:14px 16px;margin:18px 0;background:#f3eef9;border-left:4px solid var(--violet)}.callout.critical{background:#fff0f2;border-color:var(--red)}.callout strong{color:#32136b}table{width:100%;border-collapse:collapse;margin:14px 0 21px;font-size:12.5px}th{background:var(--purple);color:#fff;padding:9px 10px;text-align:left}td{padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}tr:nth-child(even) td{background:var(--soft)}.tag{font-weight:700;white-space:nowrap}.p0{color:var(--red)}.p1{color:#a85d00}.p2{color:var(--green)}.formula{background:var(--mint);border-left:4px solid var(--green);padding:13px 15px;font-family:Consolas,monospace;font-size:13px}.two-cols{display:grid;grid-template-columns:1fr 1fr;gap:22px}.two-cols>div{min-width:0}ul,ol{padding-left:20px}li{margin:5px 0}.small{font-size:12px;color:var(--muted)}footer{display:flex;justify-content:space-between;border-top:1px solid var(--line);padding-top:11px;margin-top:28px;color:var(--muted);font-size:11px}@media(max-width:700px){.page{width:calc(100% - 20px);padding:26px 22px}.hero-grid,.two-cols{grid-template-columns:1fr}h1{font-size:29px}table{font-size:11px;display:block;overflow-x:auto;white-space:normal}header{gap:10px}.brand{font-size:11px}}
+@media print{body{background:#fff}.page{width:auto;margin:0;box-shadow:none;padding:0;border-top:0}.page+ .page{page-break-before:always}}
+</style>
+</head>
+<body>
+<section class="page">
+<header><div><p class="eyebrow">Vértice Care · planejamento do piloto</p><h1>MTTR estimado após a implantação do chatbot</h1></div><div class="brand">ELO<span>GROUP</span></div></header>
+<p class="lead">Base de metas para o tempo médio até a resolução dos tickets, separando o que pode ser resolvido pela IA do que exige atendimento humano. O documento não substitui a medição do piloto: define uma referência alcançável para comparar o cenário atual com o fluxo proposto.</p>
+<div class="hero-grid"><article class="hero"><span>Primeira resposta</span><strong>até 2 min</strong><p>Meta para triagem, confirmação e orientação inicial.</p></article><article class="hero pale"><span>Casos autônomos</span><strong>5–10 min</strong><p>MTTR esperado para status, rastreio e elogios.</p></article><article class="hero mint"><span>Casos humanos</span><strong>prioridade primeiro</strong><p>A fila deve resolver P0 e P1 antes dos casos de menor risco.</p></article></div>
+<div class="callout"><strong>Como interpretar:</strong> MTTR aqui significa tempo corrido entre a abertura do ticket e a resolução registrada. Para fraude, o primeiro marco é a contenção segura; a investigação financeira definitiva pode exigir uma segunda meta de prazo.</div>
+<h2>1. Regra de estimativa</h2>
+<div class="formula">MTTR estimado = tempo de triagem + tempo de resposta + tempo de consulta/ação + espera da fila humana + confirmação de solução</div>
+<p>Os intervalos abaixo combinam quatro fatores: possibilidade de resposta com dados já disponíveis, necessidade de validação humana, risco para o cliente e prioridade operacional. Quanto maior o risco, menor deve ser a espera na fila, mesmo que a solução final seja mais complexa.</p>
+<table><thead><tr><th>Prioridade</th><th>Critério</th><th>Meta de início humano</th><th>Regra de fila</th></tr></thead><tbody>
+<tr><td class="tag p0">P0 · crítica</td><td>Fraude, cobrança desconhecida/duplicada, risco de segurança.</td><td>Até 10 min após a triagem.</td><td>Passa na frente de todos; Financeiro especializado.</td></tr>
+<tr><td class="tag p1">P1 · alta</td><td>Pagamento não aprovado, defeito com impacto, atraso relevante ou cliente em risco de perda.</td><td>Até 30 min.</td><td>Atendimento antes de P2 e acompanhamento até resolver.</td></tr>
+<tr><td class="tag p2">P2 · normal</td><td>Trocas, dúvidas técnicas fora da base e exceções sem risco crítico.</td><td>Até 2 h.</td><td>Ordenação por prazo, impacto e tempo de espera.</td></tr>
+</tbody></table>
+<h2>2. MTTR estimado por categoria</h2>
+<table><thead><tr><th>Categoria</th><th>Rota proposta</th><th>MTTR alvo</th><th>Justificativa operacional</th></tr></thead><tbody>
+<tr><td><strong>Onde está meu pedido?</strong><br><span class="small">status/rastreio</span></td><td>Chatbot com consulta autenticada; humano só em exceção.</td><td><strong>5–10 min</strong></td><td>O bot consulta o pedido, explica o status e confirma se a informação resolveu a dúvida.</td></tr>
+<tr><td><strong>Elogio</strong></td><td>Chatbot agradece e registra a interação.</td><td><strong>5–10 min</strong></td><td>Não exige investigação nem ação humana, salvo solicitação adicional do cliente.</td></tr>
+<tr><td><strong>Dúvida Técnica</strong></td><td>Chatbot para conteúdo aprovado; humano quando faltar evidência.</td><td><strong>10–20 min</strong> autônomo<br><strong>2–4 h</strong> com humano</td><td>Respostas cobertas pela base são rápidas. Questões fora da cobertura recebem especialista sem inventar resposta.</td></tr>
+<tr><td><strong>Pagamento não aprovado</strong></td><td>Orientação inicial pelo bot; Financeiro para divergências.</td><td><strong>1–3 h</strong></td><td>O bot coleta dados e orienta tentativas seguras; casos persistentes entram como P1.</td></tr>
+<tr><td><strong>Troca de Tamanho</strong></td><td>Bot orienta política e coleta dados; humano confirma exceções.</td><td><strong>2–6 h</strong></td><td>O tempo depende de estoque, elegibilidade e confirmação da solicitação.</td></tr>
+<tr><td><strong>Defeito</strong></td><td>Triagem pelo bot; Qualidade/Pós-venda resolve.</td><td><strong>4–8 h</strong></td><td>Exige evidências, análise do produto e decisão humana. Casos com risco ou cliente vulnerável sobem para P1.</td></tr>
+<tr><td><strong>Fraude ou cobrança</strong></td><td>Bot apenas acolhe, bloqueia orientações inseguras e transfere ao Financeiro.</td><td><strong>30–60 min</strong> para contenção<br><strong>2–4 h</strong> para conclusão inicial</td><td>P0. A equipe deve proteger a conta/transação primeiro e investigar depois; o bot nunca encerra sozinho.</td></tr>
+</tbody></table>
+<div class="callout critical"><strong>Fraude não deve ter “resolução autônoma”.</strong> A meta de 30–60 minutos é para contenção e orientação segura, como bloquear a ação suspeita ou abrir análise especializada. A conclusão financeira pode depender de banco, adquirente ou confirmação do cliente.</div>
+<footer><span>Vértice Care · base de metas para piloto · 20/09/2026</span><b>01 / 02</b></footer>
+</section>
+<section class="page">
+<header><div><p class="eyebrow">Operação e acompanhamento</p><h1>Como transformar a estimativa em resultado</h1></div><div class="brand">ELO<span>GROUP</span></div></header>
+<h2>3. Lógica de atendimento humano</h2>
+<div class="two-cols"><div><p><strong>Etapa 1 · triagem imediata</strong></p><ul><li>Responder em até 2 minutos.</li><li>Identificar categoria, risco, dados faltantes e rota.</li><li>Classificar fraude/cobrança suspeita como P0 sem depender do score comum.</li></ul><p><strong>Etapa 2 · fila ordenada</strong></p><ul><li>P0 sempre precede P1, P2 e P3.</li><li>Dentro da mesma prioridade, atender primeiro quem tem maior prazo comprometido, impacto e espera acumulada.</li><li>Registrar responsável e próximo prazo para que o ticket não desapareça na transferência.</li></ul></div><div><p><strong>Etapa 3 · resolução</strong></p><ul><li>Fechar somente após confirmação da solução ou evidência operacional suficiente.</li><li>Não contar apenas a resposta automática como resolução.</li><li>Registrar transferência, recontato e motivo de reabertura.</li></ul><p><strong>Critério de sucesso</strong></p><ul><li>Reduzir o MTTR sem deslocar o problema para recontato, reclamação ou reabertura.</li><li>Medir separadamente resolução autônoma, resolução com humano e contenção de P0.</li></ul></div></div>
+<h2>4. Metas recomendadas para o piloto</h2>
+<table><thead><tr><th>Indicador</th><th>Meta inicial</th><th>Como medir</th></tr></thead><tbody>
+<tr><td>Primeira resposta</td><td>Mediana até 2 min; P90 até 5 min.</td><td>Primeira mensagem válida menos abertura.</td></tr>
+<tr><td>MTTR autônomo</td><td>5–10 min para status e elogios.</td><td>Fechamento confirmado pelo cliente, sem humano.</td></tr>
+<tr><td>MTTR P0</td><td>Contenção em até 60 min; conclusão inicial em até 4 h.</td><td>Evento de contenção e fechamento da primeira análise.</td></tr>
+<tr><td>MTTR P1</td><td>1–3 h para pagamento; 4–8 h para defeitos complexos.</td><td>Abertura até solução confirmada, com prioridade preservada.</td></tr>
+<tr><td>MTTR P2</td><td>2–6 h, conforme categoria e fila.</td><td>Abertura até resolução, contabilizando espera humana.</td></tr>
+<tr><td>Recontato em 7 dias</td><td>Reduzir ao longo do piloto.</td><td>Novo contato pelo mesmo motivo após fechamento.</td></tr>
+</tbody></table>
+<h2>5. Premissas e limites</h2>
+<ol><li>Os tempos são metas de planejamento, não uma promessa de desempenho já comprovada.</li><li>A estimativa assume base de conhecimento aprovada, consulta de pedidos funcionando e equipe humana disponível nos horários definidos.</li><li>O bot pode responder rápido sem reduzir o MTTR se apenas transferir o ticket. Por isso, a resolução autônoma deve exigir confirmação ou ausência de recontato em sete dias.</li><li>Tickets com dados incompletos, dependência externa ou investigação financeira podem ultrapassar o intervalo; o sistema deve registrar o motivo da espera.</li><li>O cenário atual usado como referência tem MTTR mediano próximo de 50 horas para tickets resolvidos. A proposta busca levar casos autônomos para minutos e organizar os demais por prioridade, sem mascarar a complexidade humana.</li></ol>
+<div class="callout"><strong>Base alcançável para apresentação:</strong> primeira resposta em até 2 minutos; MTTR de 5–10 minutos para status, rastreio e elogios; contenção de fraude em até 60 minutos; e resolução humana entre 1 e 8 horas conforme risco, complexidade e posição na fila.</div>
+<p class="small">Documento prospectivo elaborado a partir do fluxo e das regras do protótipo Vértice Care. Validar os intervalos com um piloto controlado e revisar as metas após observar volume, cobertura da base, disponibilidade da equipe e taxa de recontato.</p>
+<footer><span>Vértice Care · base de metas para piloto · 20/09/2026</span><b>02 / 02</b></footer>
+</section>
+</body>
+</html>

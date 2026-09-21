@@ -18,7 +18,10 @@ def process_customer_message(ticket_id: str, text: str):
     ticket = db.conversation(ticket_id)
     client = domain.customer(ticket["customer_id"])
     ticket["customer_name"] = client["name"] if client else "Cliente"
-    rule = domain.classify(text)
+    classification_text = text
+    if ticket.get("category") == "Onde está meu pedido?" and domain.find_order(text, ticket["customer_id"])[1] != "missing":
+        classification_text = f"pedido {text}"
+    rule = domain.classify(classification_text)
     order, order_state = domain.find_order(text, ticket["customer_id"])
     docs = domain.sources(text)
     model, model_error = analyze(ticket, text, order, docs)
