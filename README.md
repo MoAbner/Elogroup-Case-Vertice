@@ -2,10 +2,10 @@
 
 Aplicação local com duas visões no mesmo histórico:
 
-- **Cliente:** conversa com o chatbot por canal, consulta pedido fictício, recebe resposta ou transferência.
+- **Cliente:** conversa com o chatbot, consulta pedido fictício e recebe resposta ou transferência.
 - **Central omnichannel:** fila única, prioridade, equipe, conversa completa e resposta humana.
-- **Acessos mockados:** gestor, atendimento geral, financeiro e pós-venda definidos em `app/data/access.json`. O servidor filtra leitura e resposta pela equipe.
-- **IA configurável:** usa a API de chat da EloGroup quando chave e modelo estão configurados; sem eles, mantém a demonstração com fallback local seguro.
+- **Acessos mockados:** gestor, atendimento geral, financeiro e pós-venda definidos em `app/data/access.json`.
+- **IA configurável:** usa a API de chat da EloGroup quando chave e modelo estão configurados; sem eles, usa fallback local seguro.
 
 ## Executar
 
@@ -27,7 +27,7 @@ ELOGROUP_API_KEY=sua-chave
 ELOGROUP_API_MODEL=id-exato-retornado-por-api-models
 ```
 
-A URL padrão é `https://chat.eloagents.click/api/v1/sandbox`. A aplicação chama `POST /api/chat/completions`. A chave fica somente no servidor e nunca é enviada ao navegador. Não versionar `.env.local`.
+A URL padrão é `https://chat.eloagents.click/api/v1/sandbox`. A aplicação chama `POST /api/chat/completions`. A chave fica somente no servidor e nunca é enviada ao navegador. Não versione `.env.local`.
 
 ## Demonstração
 
@@ -37,12 +37,12 @@ A URL padrão é `https://chat.eloagents.click/api/v1/sandbox`. A aplicação ch
 4. Em **Central omnichannel**, altere o perfil. O atendente geral não enxerga Financeiro; o especialista financeiro enxerga e responde o P0.
 5. Responda na central e retorne à visão do cliente: o mesmo histórico é exibido.
 
-Os pedidos, perfis, canais e conversas iniciais são fictícios. Use `POST /api/reset` com `{"actor_id":"gestor-01"}` para restaurar os exemplos, ou apague `app/data/prototipo.db` com o servidor desligado.
+Os pedidos, perfis, canais e conversas iniciais são fictícios. Use `POST /api/reset` com `{"actor_id":"gestor-01"}` para restaurar os exemplos.
 
 ## Guardrails
 
 - Todo chamado é analisado pela IA quando a API está configurada.
-- O servidor aplica regras críticas depois da resposta do modelo: cobrança/fraude nunca é encerrada pelo bot.
+- O servidor aplica regras críticas depois da resposta do modelo: cobrança e fraude nunca são encerradas pelo bot.
 - Pedido só é exibido quando pertence ao cliente fictício selecionado.
 - Perguntas gerais são recusadas; a IA só recebe fontes aprovadas e pedido autorizado.
 - Ausência de fonte gera transferência, não uma resposta inventada.
@@ -61,41 +61,40 @@ Os pedidos, perfis, canais e conversas iniciais são fictícios. Use `POST /api/
 
 ## Análise de custos e ranking
 
-- `documentacao/ANALISE_CUSTOS_CHATBOT_OMNICHANNEL.html`: estimativa mensal e anual, canais, tokens e implantação separada.
-- `documentacao/ANALISE_CUSTOS_CHATBOT_OMNICHANNEL.pdf`: versão pronta para apresentação.
-- `documentacao/premissas_custos.json` e `documentacao/custos_recorrentes.csv`: memória dos cálculos.
-- `documentacao/AUDITORIA_RANKINGS.md`: verificação do 40/40/20 e da fila-2.0 no protótipo final.
-- `documentacao/gerar_analise_custos.py`: regenera os documentos e cálculos quando volume, câmbio ou tarifas mudarem.
+- `Análises/ANALISE_CUSTOS_CHATBOT_OMNICHANNEL.html`: estimativa mensal e anual, canais, tokens e implantação separada.
+- `Análises/documentacao/ANALISE_CUSTOS_CHATBOT_OMNICHANNEL.pdf`: versão pronta para apresentação.
+- `Análises/documentacao/premissas_custos.json` e `custos_recorrentes.csv`: memória dos cálculos.
+- `Análises/documentacao/AUDITORIA_RANKINGS.md`: verificação do 40/40/20 e da fila-2.0.
 
-## Telas do prot?tipo
+## Telas do protótipo
 
-As imagens abaixo registram os principais fluxos da demonstra??o e ficam na pasta [`ENTREGAS/Prot?tipo`](ENTREGAS/Prot%C3%B3tipo).
+As imagens abaixo registram os principais fluxos da demonstração e ficam na pasta [`ENTREGAS/Protótipo`](ENTREGAS/Prot%C3%B3tipo).
 
-### Vis?o do cliente
+### Visão do cliente
 
-A experi?ncia come?a em uma conversa ?nica. O cliente informa a d?vida, consulta um pedido fict?cio e pode confirmar a solu??o ou pedir atendimento humano.
+A experiência começa em uma conversa única. O cliente informa a dúvida, consulta um pedido fictício e pode confirmar a solução ou pedir atendimento humano.
 
 ![Novo atendimento](ENTREGAS/Prot%C3%B3tipo/Novo%20atendimento.png)
 
 ### Consulta de pedido
 
-O chatbot solicita o c?digo do pedido, valida o perfil selecionado e apresenta somente informa??es existentes nos registros mockados.
+O chatbot solicita o código do pedido, valida o perfil selecionado e apresenta somente informações existentes nos registros mockados.
 
-![Onde est? meu pedido](ENTREGAS/Prot%C3%B3tipo/Onde%20est%C3%A1%20meu%20pedido.png)
+![Onde está meu pedido](ENTREGAS/Prot%C3%B3tipo/Onde%20est%C3%A1%20meu%20pedido.png)
 
 ### Central omnichannel
 
-A opera??o re?ne canais em uma fila ?nica, mostra prioridade, equipe respons?vel, hist?rico completo e permite resposta humana no mesmo ticket.
+A operação reúne canais em uma fila única, mostra prioridade, equipe responsável, histórico completo e permite resposta humana no mesmo ticket.
 
 ![Central omnichannel](ENTREGAS/Prot%C3%B3tipo/Omnichanel.png)
 
 ### Encaminhamento fora do escopo
 
-Perguntas gerais ou administrativas s?o recusadas com orienta??o de escopo, sem inventar informa??es e sem abrir uma resposta indevida.
+Perguntas gerais ou administrativas são recusadas com orientação de escopo, sem inventar informações e sem abrir uma resposta indevida.
 
 ![Fora do escopo](ENTREGAS/Prot%C3%B3tipo/Fora%20do%20escopo.png)
 
-### Documenta??o da solu??o
+### Documentação da solução
 
-- [Solu??o completa em HTML](ENTREGAS/Prot%C3%B3tipo/SOLUCAO_COMPLETA.html)
-- [Solu??o completa em PDF](ENTREGAS/Prot%C3%B3tipo/SOLUCAO_COMPLETA.atualizado.pdf)
+- [Solução completa em HTML](ENTREGAS/Prot%C3%B3tipo/SOLUCAO_COMPLETA.html)
+- [Solução completa em PDF](ENTREGAS/Prot%C3%B3tipo/SOLUCAO_COMPLETA.atualizado.pdf)
