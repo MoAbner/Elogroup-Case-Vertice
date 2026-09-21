@@ -66,3 +66,36 @@ Os pedidos, perfis, canais e conversas iniciais são fictícios. Use `POST /api/
 - `documentacao/premissas_custos.json` e `documentacao/custos_recorrentes.csv`: memória dos cálculos.
 - `documentacao/AUDITORIA_RANKINGS.md`: verificação do 40/40/20 e da fila-2.0 no protótipo final.
 - `documentacao/gerar_analise_custos.py`: regenera os documentos e cálculos quando volume, câmbio ou tarifas mudarem.
+
+## Telas do prot?tipo
+
+As imagens abaixo registram os principais fluxos da demonstra??o e ficam na pasta [`ENTREGAS/Prot?tipo`](ENTREGAS/Prot%C3%B3tipo).
+
+### Vis?o do cliente
+
+A experi?ncia come?a em uma conversa ?nica. O cliente informa a d?vida, consulta um pedido fict?cio e pode confirmar a solu??o ou pedir atendimento humano.
+
+![Novo atendimento](ENTREGAS/Prot%C3%B3tipo/Novo%20atendimento.png)
+
+### Consulta de pedido
+
+O chatbot solicita o c?digo do pedido, valida o perfil selecionado e apresenta somente informa??es existentes nos registros mockados.
+
+![Onde est? meu pedido](ENTREGAS/Prot%C3%B3tipo/Onde%20est%C3%A1%20meu%20pedido.png)
+
+### Central omnichannel
+
+A opera??o re?ne canais em uma fila ?nica, mostra prioridade, equipe respons?vel, hist?rico completo e permite resposta humana no mesmo ticket.
+
+![Central omnichannel](ENTREGAS/Prot%C3%B3tipo/Omnichanel.png)
+
+### Encaminhamento fora do escopo
+
+Perguntas gerais ou administrativas s?o recusadas com orienta??o de escopo, sem inventar informa??es e sem abrir uma resposta indevida.
+
+![Fora do escopo](ENTREGAS/Prot%C3%B3tipo/Fora%20do%20escopo.png)
+
+### Documenta??o da solu??o
+
+- [Solu??o completa em HTML](ENTREGAS/Prot%C3%B3tipo/SOLUCAO_COMPLETA.html)
+- [Solu??o completa em PDF](ENTREGAS/Prot%C3%B3tipo/SOLUCAO_COMPLETA.atualizado.pdf)
